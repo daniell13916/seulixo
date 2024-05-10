@@ -1,3 +1,5 @@
+
+import session_info
 import streamlit as st
 import psycopg2
 import time
@@ -37,7 +39,8 @@ def create_user_table():
     finally:
         if conn:
             conn.close()
-            
+
+
 #cria a tabela caso tenha novo cadastro e ela não exista
 def create_empresa(nome_empresa):
     try:
@@ -251,7 +254,10 @@ def home():
         st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Produtos</h1>", unsafe_allow_html=True)
         st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZW6tGm.caneta.md.jpeg" alt="caneta" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner" width="325" height="325"></td></tr></table>', 
          unsafe_allow_html=True)
+
         
+
+
     # Página de cadastro
 def register():
     with tab2:
@@ -361,7 +367,7 @@ def buscar_valores_proporcoes(senha):
     try:
         # Conectar ao banco de dados PostgreSQL
         conn = psycopg2.connect(
-            host="localhost",
+            host="192.168.100.7",
             database="seulixo",
             user="postgres",
             password="postgres"
@@ -647,6 +653,14 @@ def collection_form():
 collection_form()
 
 # Criar a tabela de usuários se ainda não existir
+create_user_table()
+
+# Executar o site
+home()
+
+#Todas as versões do python e bibliotecas
+session_info.show()
+
 create_user_table()
 
 # Executar o site
