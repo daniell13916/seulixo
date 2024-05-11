@@ -10,7 +10,7 @@ import locale
 
 # Conectar ao banco de dados PostgreSQL
 conn = psycopg2.connect(
-    host="192.168.100.7",
+    host="localhost",
     database="seulixo",
     user="postgres",
     password="postgres"
@@ -315,7 +315,7 @@ def buscar_valores_e_criar_grafico(senha):
     try:
         # Conectar ao banco de dados PostgreSQL
         conn = psycopg2.connect(
-            host="192.168.100.7",
+            host="localhost",
             database="seulixo",
             user="postgres",
             password="postgres"
@@ -367,7 +367,7 @@ def buscar_valores_proporcoes(senha):
     try:
         # Conectar ao banco de dados PostgreSQL
         conn = psycopg2.connect(
-            host="192.168.100.7",
+            host="localhost",
             database="seulixo",
             user="postgres",
             password="postgres"
@@ -501,7 +501,7 @@ def calcular_economias(porcentagem_plastico, porcentagem_vidro, porcentagem_pape
 def generate_report(senha_empresa, data_inicio, data_fim):
     # Conectar ao banco de dados PostgreSQL
     conn = psycopg2.connect(
-        host="192.168.100.7",
+        host="localhost",
         database="seulixo",
         user="postgres",
         password="postgres"
