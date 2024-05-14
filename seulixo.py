@@ -305,9 +305,6 @@ def check_table_existence(senha_empresa, username, dia, mes, ano, volume):
     except psycopg2.Error as e:
         return f"Erro ao conectar ao banco de dados: {e}"
 
-# Configura o idioma para português
-#locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
-
 # Função para conectar ao banco de dados PostgreSQL, buscar os valores das colunas para uma linha específica
 # e criar um gráfico de pizza com base nesses valores
 def buscar_valores_e_criar_grafico(senha):
