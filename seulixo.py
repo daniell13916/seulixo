@@ -594,5 +594,3 @@ create_user_table()
 # Executar o site
 home()
 
-#Todas as versões do python e bibliotecas
-session_info.show()
