@@ -158,7 +158,6 @@ tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 def home():
     with tab1:
         st.markdown("<h1 style='color: #38b6ff;'>Quem Somos</h1>", unsafe_allow_html=True)
-        # Adiciona o texto com o estilo de centralização
         st.markdown("""
         <div style='color: #000000; width: 100%;'>
         <p>Somos especialistas em gestão de resíduos e rejeitos não perigosos em condomínios residenciais, escritórios, bares, restaurantes, supermercados, escolas, universidades e eventos.</p>
@@ -170,9 +169,6 @@ def home():
         """, unsafe_allow_html=True) 
         st.markdown("<p style='font-size:20px'><span style='color: #000000;'>Nos convide para uma visita, a </span><span style='font-weight:bold; color: #38b6ff;'>SEU </span><span style='font-weight:bold; color: #000000;'>LIXO</span><span style='color: #000000;'> vai até você.</span></p>", unsafe_allow_html=True)
 
-      # Criando uma tabela com duas colunas e bordas invisíveis
-        # Define o estilo CSS para a animação de texto
-        # Define o estilo CSS para a animação de texto e o fundo roxo claro
         st.markdown("""
             <style>
                 @keyframes color-change {
@@ -190,71 +186,14 @@ def home():
             </style>
         """, unsafe_allow_html=True)
 
-        # Adiciona a primeira imagem à primeira coluna e centraliza
-        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59" border="0" style="max-width: 100%; max-height: 100%;"></a></td><td style="width: 50%;"><p class="animated-text">Estamos felizes em cuidar do bem estar das pessoas.<br>Reciclar preserva o planeta.<br>Consulte-nos.</p></td></tr></table>', 
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59" border="0" style="max-width: 100%; width: 100%;"></a></td><td style="width: 50%;"><p class="animated-text">Estamos felizes em cuidar do bem estar das pessoas.<br>Reciclar preserva o planeta.<br>Consulte-nos.</p></td></tr></table>', 
                 unsafe_allow_html=True)
-                # Define o estilo CSS para a animação de texto e o fundo roxo claro
-        st.write(" ")
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44" width="330" height="430"></td><td><img src="https://i.im.ge/2024/05/06/ZWUgXS.d8693ed2-6672-40a7-a873-42d42ed04e1f.md.jpeg" alt="d8693ed2 6672 40a7 a873 42d42ed04e1f" width="330" height="430"></td></tr></table>', 
-                unsafe_allow_html=True)
-        st.write(" ")
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWhZ5r.1691099049993.md.jpeg" alt="1691099049993" width="330" height="430"></td><td><img src="https://i.im.ge/2024/05/06/ZWhzEc.1689353357634.md.jpeg" alt="1689353357634" width="330" height="430"></td></tr></table>', 
-                unsafe_allow_html=True)
-        st.write(" ")
-        st.markdown("""
-            <style>
-                @keyframes color-change {
-                    0% { color: #38b6ff; }
-                    50% { color: white; }
-                    100% { color: #38b6ff; }
-                }
 
-                .animated-text {
-                    animation: color-change 3s infinite;
-                    background-color: #96298F; /* roxo claro */
-                    padding: 20px;
-                    border-radius: 10px;
-                    text-align: center; /* Centraliza o texto */
-                }
-
-                .big-text {
-                    font-size: 24px; /* Tamanho maior de fonte */
-                    text-transform: uppercase; /* Transforma o texto em maiúsculo */
-                }
-            </style>
-        """, unsafe_allow_html=True)
-
-        # Adiciona a nova imagem e a frase à tabela
-        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/bicicletaseulixo.ZW5nfP"><img src="https://i.im.ge/2024/05/06/ZW5nfP.bicicletaseulixo.md.jpeg" alt="bicicletaseulixo" border="0" style="max-width: 100%; max-height: 100%;"></a></td><td style="width: 50%;"><div class="animated-text big-text">Veículos não poluentes</div><br><div class="animated-text">Utilizamos somente veículos não poluentes para transportar os resíduos, como os bike-triciclos de gaiola para condomínios pequenos, os Tuk Tuk elétricos para distâncias maiores e vias urbanas e o Eco-Truck elétrico com baú para coletas urbanas de maior distância.</div></td></tr></table>', 
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44" style="max-width: 100%; width: 100%;"></td><td><img src="https://i.im.ge/2024/05/06/ZWUgXS.d8693ed2-6672-40a7-a873-42d42ed04e1f.md.jpeg" alt="d8693ed2 6672 40a7 a873 42d42ed04e1f" style="max-width: 100%; width: 100%;"></td></tr></table>', 
                 unsafe_allow_html=True)
         
-        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Clientes SEU LIXO</h1>", unsafe_allow_html=True)
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWjLBW.DVILE.md.png" alt="DVILE" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWj91L.NUGUER.md.jpeg" alt="NUGUER" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjmZx.EUDORA.jpeg" alt="EUDORA" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjNhJ.RECICLA-CLUB.png" alt="RECICLA CLUB" width="150" height="150"></td></tr></table>', 
-         unsafe_allow_html=True)
-        st.write(" ")
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWm1ey.pasta.md.jpeg" alt="pasta" width="210" height="210"></td><td><img src="https://i.im.ge/2024/05/06/ZWmSDS.divino.md.jpeg" alt="divino" width="210" height="210"></td><td><img src="https://i.im.ge/2024/05/06/ZWmqv6.terra.md.jpeg" alt="terra" width="210" height="210"></td></tr><tr><td><img src="https://i.im.ge/2024/05/06/ZWm6Nq.oli-pizza.md.jpeg" alt="oli pizza" width="210" height="210"></td><td><img src="https://i.im.ge/2024/05/06/ZWmfMJ.OLI-POp.jpeg" alt="OLI POp" width="210" height="210"></td><td><img src="https://i.im.ge/2024/05/06/ZWmkIy.banana.jpeg" alt="banana" width="210" height="210"></td></tr></table>', 
-         unsafe_allow_html=True)
-        st.write(" ")
-        st.write('<table style="border: none; margin: auto;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWwQQh.rota.md.jpeg" alt="rota" width="400"></td></tr></table>', 
-         unsafe_allow_html=True)
-        st.write(" ")
-        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Condomínios</h1>", unsafe_allow_html=True)
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWwxWX.jardin.md.jpeg" alt="jardin" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZWwbUh.tambore.md.jpeg" alt="tambore" width="325" height="325"></td></tr><tr><td><img src="https://i.im.ge/2024/05/06/ZWwg4Y.gavea.md.jpeg" alt="gavea" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZWwWt4.park.jpeg" alt="park" width="325" height="325"></td></tr></table>', 
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWhZ5r.1691099049993.md.jpeg" alt="1691099049993" style="max-width: 100%; width: 100%;"></td><td><img src="https://i.im.ge/2024/05/06/ZWhzEc.1689353357634.md.jpeg" alt="1689353357634" style="max-width: 100%; width: 100%;"></td></tr></table>', 
                 unsafe_allow_html=True)
-        st.write(" ")
-        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Eventos</h1>", unsafe_allow_html=True)
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZW6OaS.corriga.jpeg" alt="corriga" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZW62H6.mov.md.jpeg" alt="mov" width="325" height="325"></td></tr></table>', 
-         unsafe_allow_html=True)
-        st.write(" ")
-        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Escritório</h1>", unsafe_allow_html=True)
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZW691C.EEE.md.jpeg" alt="EEE" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZW66XP.ARIEL.md.jpeg" alt="ARIEL" width="325" height="325"></td></tr></table>', 
-         unsafe_allow_html=True)
-        st.write(" ")
-        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Produtos</h1>", unsafe_allow_html=True)
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZW6tGm.caneta.md.jpeg" alt="caneta" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner" width="325" height="325"></td></tr></table>', 
-         unsafe_allow_html=True)
-
-        
 
 
     # Página de cadastro
