@@ -156,348 +156,76 @@ tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 
 def home():
     with tab1:
-        <!DOCTYPE html>
-        <html>
+        st.markdown("<h1 style='color: #38b6ff;'>Quem Somos</h1>", unsafe_allow_html=True)
+        st.markdown("""
+        <div style='color: #000000; width: 100%;'>
+        <p>Somos especialistas em gestão de resíduos e rejeitos não perigosos em condomínios residenciais, escritórios, bares, restaurantes, supermercados, escolas, universidades e eventos.</p>
+
+        <p>Cuidamos de todo o processo, desde a educação ambiental dos usuários até a destinação adequada dos materiais, enviados para recicladores parceiros. O resultado é economia e bem estar nos espaços onde atuamos, além da possibilidade de premiação pública e/ou privada para as boas práticas adotadas por nossos clientes.</p>
+
+        <p>O trabalho é executado por profissionais capacitados que recolhem os resíduos em veículos não poluentes ou de baixa emissão. Além da coleta seletiva, também implementamos processos para a compostagem da massa verde, resíduos orgânicos e gestão eficiente dos recursos energéticos e hídricos.</p>
+        </div>
+        """, unsafe_allow_html=True) 
+        st.markdown("<p style='font-size:20px'><span style='color: #000000;'>Nos convide para uma visita, a </span><span style='font-weight:bold; color: #38b6ff;'>SEU </span><span style='font-weight:bold; color: #000000;'>LIXO</span><span style='color: #000000;'> vai até você.</span></p>", unsafe_allow_html=True)
+
+        st.markdown("""
+            <style>
+                @keyframes color-change {
+                    0% { color: #38b6ff; }
+                    50% { color: white; }
+                    100% { color: #38b6ff; }
+                }
+
+                .animated-text {
+                    animation: color-change 3s infinite;
+                    background-color: #96298F; /* roxo claro */
+                    padding: 20px;
+                    border-radius: 10px;
+                    text-align: center;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59" border="0" style="max-width: 100%; width: 100%;"></a></td><td style="width: 50%;"><p class="animated-text">Estamos felizes em cuidar do bem estar das pessoas.<br>Reciclar preserva o planeta.<br>Consulte-nos.</p></td></tr></table>', 
+                unsafe_allow_html=True)
+
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44" style="max-width: 100%; width: 100%;"></td><td><img src="https://i.im.ge/2024/05/06/ZWUgXS.d8693ed2-6672-40a7-a873-42d42ed04e1f.md.jpeg" alt="d8693ed2 6672 40a7 a873 42d42ed04e1f" style="max-width: 100%; width: 100%;"></td></tr></table>', 
+                unsafe_allow_html=True)
         
-        <head>
-          <!-- Basic -->
-          <meta charset="utf-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <!-- Mobile Metas -->
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <!-- Site Metas -->
-          <link rel="icon" href="images/favicon.png" type="image/gif" />
-          <meta name="keywords" content="" />
-          <meta name="description" content="" />
-          <meta name="author" content="" />
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWhZ5r.1691099049993.md.jpeg" alt="1691099049993" style="max-width: 100%; width: 100%;"></td><td><img src="https://i.im.ge/2024/05/06/ZWhzEc.1689353357634.md.jpeg" alt="1689353357634" style="max-width: 100%; width: 100%;"></td></tr></table>', 
+                unsafe_allow_html=True)
+
+        st.write(" ")
+
+        st.write('<table style="border: none;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZW5nfP.bicicletaseulixo.md.jpeg" alt="bicicletaseulixo" style="max-width: 100%; width: 100%;"></td><td><div class="animated-text big-text">Veículos não poluentes</div><br><div class="animated-text">Utilizamos somente veículos não poluentes para transportar os resíduos, como os bike-triciclos de gaiola para condomínios pequenos, os Tuk Tuk elétricos para distâncias maiores e vias urbanas e o Eco-Truck elétrico com baú para coletas urbanas de maior distância.</div></td></tr></table>', 
+                unsafe_allow_html=True)
         
-          <title>Tracork</title>
-        
-          <!-- slider stylesheet -->
-          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-          <!-- bootstrap core css -->
-          <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-          <!-- fonts style -->
-          <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"> <!-- range slider -->
-          <!-- font awesome style -->
-          <link href="css/font-awesome.min.css" rel="stylesheet" />
-        
-          <!-- Custom styles for this template -->
-          <link href="css/style.css" rel="stylesheet" />
-          <!-- responsive style -->
-          <link href="css/responsive.css" rel="stylesheet" />
-        
-        </head>
-        
-        <body class="sub_page">
-        
-          <div class="hero_area">
-            <!-- header section strats -->
-            <header class="header_section">
-              <div class="header_top">
-                <div class="container-fluid">
-                  <div class="top_nav_container">
-                    <a class="navbar-brand d-none d-lg-flex" href="index.html">
-                      <span>
-                        Tracork
-                      </span>
-                    </a>
-                    <div class="contact_nav">
-                      <a href="">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <span>
-                          Call : +01 123455678990
-                        </span>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span>
-                          Email : demo@gmail.com
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="header_bottom">
-                <div class="container-fluid">
-                  <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <a class="navbar-brand d-lg-none" href="index.html">
-                      <span>
-                        Tracork
-                      </span>
-                    </a>
-        
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class=""> </span>
-                    </button>
-        
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav">
-                        <li class="nav-item">
-                          <a class="nav-link pl-lg-0" href="index.html">Home </a>
-                        </li>
-                        <li class="nav-item active">
-                          <a class="nav-link" href="service.html">Services <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="about.html"> About</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="why.html">Why Us</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="contact.html">Contact Us</a>
-                        </li>
-                      </ul>
-                      <from class="search_form">
-                        <input type="text" class="form-control" placeholder="Search here...">
-                        <button class="" type="submit">
-                          <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                      </from>
-                    </div>
-                  </nav>
-                </div>
-              </div>
-            </header>
-            <!-- end header section -->
-          </div>
-        
-        
-          <!-- service section -->
-        
-          <section class="service_section layout_padding">
-            <div class="service_container">
-              <div class="container ">
-                <div class="heading_container heading_center">
-                  <h2>
-                    Our <span>Services</span>
-                  </h2>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                  </p>
-                </div>
-                <div class="row">
-                  <div class="col-md-6 ">
-                    <div class="box ">
-                      <div class="img-box">
-                        <img src="images/s1.png" alt="">
-                      </div>
-                      <div class="detail-box">
-                        <h5>
-                          Computer Repair
-                        </h5>
-                        <p>
-                          fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                          The
-                          point of using
-                        </p>
-                        <a href="">
-                          Read More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 ">
-                    <div class="box ">
-                      <div class="img-box">
-                        <img src="images/s2.png" alt="">
-                      </div>
-                      <div class="detail-box">
-                        <h5>
-                          Hardware Replacement
-                        </h5>
-                        <p>
-                          fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                          The
-                          point of using
-                        </p>
-                        <a href="">
-                          Read More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 ">
-                    <div class="box ">
-                      <div class="img-box">
-                        <img src="images/s3.png" alt="">
-                      </div>
-                      <div class="detail-box">
-                        <h5>
-                          Data Recovery
-                        </h5>
-                        <p>
-                          fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                          The
-                          point of using
-                        </p>
-                        <a href="">
-                          Read More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 ">
-                    <div class="box ">
-                      <div class="img-box">
-                        <img src="images/s4.png" alt="">
-                      </div>
-                      <div class="detail-box">
-                        <h5>
-                          Software Update
-                        </h5>
-                        <p>
-                          fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                          The
-                          point of using
-                        </p>
-                        <a href="">
-                          Read More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="btn-box">
-                  <a href="">
-                    See All
-                  </a>
-                </div>
-              </div>
-            </div>
-          </section>
-        
-          <!-- end service section -->
-        
-          <!-- footer section -->
-          <footer class="footer_section">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6 col-lg-3 footer-col">
-                  <div class="footer_detail">
-                    <h4>
-                      About
-                    </h4>
-                    <p>
-                      Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
-                    </p>
-                    <div class="footer_social">
-                      <a href="">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-2 mx-auto footer-col">
-                  <div class="footer_link_box">
-                    <h4>
-                      Links
-                    </h4>
-                    <div class="footer_links">
-                      <a class="active" href="index.html">
-                        Home
-                      </a>
-                      <a class="" href="service.html">
-                        Services
-                      </a>
-                      <a class="" href="about.html">
-                        About
-                      </a>
-                      <a class="" href="why.html">
-                        Why Us
-                      </a>
-                      <a class="" href="contact.html">
-                        Contact Us
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-3 footer-col">
-                  <div class="footer_contact">
-                    <h4>
-                      Contact Info
-                    </h4>
-                    <div class="contact_link_box">
-                      <p>
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span>
-                          Location
-                        </span>
-                      </p>
-                      <a href="">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <span>
-                          Call +01 1234567890
-                        </span>
-                      </a>
-                      <a href="">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span>
-                          demo@gmail.com
-                        </span>
-                      </a>
-                      <p>
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        <span>
-                          Mon-Sat: 09.00 am - 06.00 pm
-                        </span>
-                      </p>
-                      <p>
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        <span>
-                          Sunday: closed
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-4 footer-col">
-                  <div class="map_container">
-                    <div class="map">
-                      <div id="googleMap"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="footer-info">
-              <div class="container">
-                <p>
-                  &copy; <span id="displayYear"></span> All Rights Reserved By
-                  <a href="https://html.design/">Free Html Templates</a>
-                </p>
-              </div>
-            </div>
-          </footer>
-          <!-- footer section -->
-        
-          <!-- jQery -->
-          <script src="js/jquery-3.4.1.min.js"></script>
-          <!-- bootstrap js -->
-          <script src="js/bootstrap.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-          </script>
-          <!-- custom js -->
-          <script src="js/custom.js"></script>
-          <!-- Google Map -->
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-          </script>
-          <!-- End Google Map -->
-        
-        </body>
-        
-        </html>
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Clientes SEU LIXO</h1>", unsafe_allow_html=True)
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWjLBW.DVILE.md.png" alt="DVILE" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWj91L.NUGUER.md.jpeg" alt="NUGUER" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjmZx.EUDORA.jpeg" alt="EUDORA" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjNhJ.RECICLA-CLUB.png" alt="RECICLA CLUB" width="150" height="150"></td></tr></table>', 
+         unsafe_allow_html=True)
+        st.write(" ")
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWm1ey.pasta.md.jpeg" alt="pasta" width="210" height="210"></td><td><img src="https://i.im.ge/2024/05/06/ZWmSDS.divino.md.jpeg" alt="divino" width="210" height="210"></td><td><img src="https://i.im.ge/2024/05/06/ZWmqv6.terra.md.jpeg" alt="terra" width="210" height="210"></td></tr><tr><td><img src="https://i.im.ge/2024/05/06/ZWm6Nq.oli-pizza.md.jpeg" alt="oli pizza" width="210" height="210"></td><td><img src="https://i.im.ge/2024/05/06/ZWmfMJ.OLI-POp.jpeg" alt="OLI POp" width="210" height="210"></td><td><img src="https://i.im.ge/2024/05/06/ZWmkIy.banana.jpeg" alt="banana" width="210" height="210"></td></tr></table>', 
+         unsafe_allow_html=True)
+        st.write(" ")
+        st.write('<table style="border: none; margin: auto;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWwQQh.rota.md.jpeg" alt="rota" width="400"></td></tr></table>', 
+         unsafe_allow_html=True)
+        st.write(" ")
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Condomínios</h1>", unsafe_allow_html=True)
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWwxWX.jardin.md.jpeg" alt="jardin" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZWwbUh.tambore.md.jpeg" alt="tambore" width="325" height="325"></td></tr><tr><td><img src="https://i.im.ge/2024/05/06/ZWwg4Y.gavea.md.jpeg" alt="gavea" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZWwg4Y.gavea.md.jpeg" alt="gavea" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZWwWt4.park.jpeg" alt="park" width="325" height="325"></td></tr></table>',
+unsafe_allow_html=True)
+st.write(" ")
+st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Eventos</h1>", unsafe_allow_html=True)
+st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZW6OaS.corriga.jpeg" alt="corriga" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZW62H6.mov.md.jpeg" alt="mov" width="325" height="325"></td></tr></table>',
+unsafe_allow_html=True)
+st.write(" ")
+st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Escritório</h1>", unsafe_allow_html=True)
+st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZW691C.EEE.md.jpeg" alt="EEE" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZW66XP.ARIEL.md.jpeg" alt="ARIEL" width="325" height="325"></td></tr></table>',
+unsafe_allow_html=True)
+st.write(" ")
+st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Produtos</h1>", unsafe_allow_html=True)
+st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZW6tGm.caneta.md.jpeg" alt="caneta" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner" width="325" height="325"></td></tr></table>',
+unsafe_allow_html=True)
+
         # Página de cadastro
     def register():
         with tab2:
