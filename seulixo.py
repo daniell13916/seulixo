@@ -10,8 +10,8 @@ import locale
 
 # Conectar ao banco de dados PostgreSQL
 conn = psycopg2.connect(
-    host="localhost",
-    database="seulixo",
+    host="seulixo-aws.c7my4s6c6mqm.us-east-1.rds.amazonaws.com",
+    database="postgres",
     user="postgres",
     password="postgres"
 )
@@ -315,8 +315,8 @@ def buscar_valores_e_criar_grafico(senha):
     try:
         # Conectar ao banco de dados PostgreSQL
         conn = psycopg2.connect(
-            host="localhost",
-            database="seulixo",
+            host="seulixo-aws.c7my4s6c6mqm.us-east-1.rds.amazonaws.com",
+            database="postgres",
             user="postgres",
             password="postgres"
         )
@@ -367,8 +367,8 @@ def buscar_valores_proporcoes(senha):
     try:
         # Conectar ao banco de dados PostgreSQL
         conn = psycopg2.connect(
-            host="localhost",
-            database="seulixo",
+            host="seulixo-aws.c7my4s6c6mqm.us-east-1.rds.amazonaws.com",
+            database="postgres",
             user="postgres",
             password="postgres"
         )
@@ -501,8 +501,8 @@ def calcular_economias(porcentagem_plastico, porcentagem_vidro, porcentagem_pape
 def generate_report(senha_empresa, data_inicio, data_fim):
     # Conectar ao banco de dados PostgreSQL
     conn = psycopg2.connect(
-        host="localhost",
-        database="seulixo",
+        host="seulixo-aws.c7my4s6c6mqm.us-east-1.rds.amazonaws.com",
+        database="postgres",
         user="postgres",
         password="postgres"
     )
