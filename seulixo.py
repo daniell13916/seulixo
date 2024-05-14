@@ -35,6 +35,7 @@ def create_user_table():
         # Commit a transação após a criação da tabela
         conn.commit()
     except psycopg2.Error as e:
+        st.error(f"Erro ao criar tabela de usuários: {e}")
     finally:
         if conn:
             conn.close()
