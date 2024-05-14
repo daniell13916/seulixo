@@ -16,6 +16,29 @@ conn = psycopg2.connect(
     password="postgres"
 )
 
+def create_user_table():
+    try:
+        with conn:
+            with conn.cursor() as cur:
+                # Criar a tabela de usuários dentro do esquema "public"
+                cur.execute("""
+                    CREATE TABLE IF NOT EXISTS users (
+                        id SERIAL PRIMARY KEY,
+                        username VARCHAR(50) UNIQUE NOT NULL,
+                        email VARCHAR(100) UNIQUE NOT NULL,
+                        password VARCHAR(255) NOT NULL,
+                        função VARCHAR(20) NOT NULL,
+                        empresa VARCHAR(100) DEFAULT NULL,
+                        acesso BOOLEAN DEFAULT FALSE
+                    );
+                """)
+        # Commit a transação após a criação da tabela
+        conn.commit()
+    except psycopg2.Error as e:
+    finally:
+        if conn:
+            conn.close()
+
 #cria a tabela caso tenha novo cadastro e ela não exista
 def create_empresa(nome_empresa):
     try:
