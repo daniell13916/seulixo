@@ -1,4 +1,3 @@
-Fimport session_info
 import streamlit as st
 import psycopg2
 import time
