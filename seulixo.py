@@ -16,7 +16,7 @@ conn = psycopg2.connect(
     password="postgres"
 )
 
-def create_user_table():
+"""def create_user_table():
     try:
         with conn:
             with conn.cursor() as cur:
@@ -38,7 +38,7 @@ def create_user_table():
         st.error(f"Erro ao criar tabela de usuários: {e}")
     finally:
         if conn:
-            conn.close()
+            conn.close()"""
 
 
 #cria a tabela caso tenha novo cadastro e ela não exista
