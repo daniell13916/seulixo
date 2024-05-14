@@ -226,21 +226,21 @@ st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Produtos</h1>", uns
 st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZW6tGm.caneta.md.jpeg" alt="caneta" width="325" height="325"></td><td><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner" width="325" height="325"></td></tr></table>',
 unsafe_allow_html=True)
 
-        # Página de cadastro
-    def register():
-        with tab2:
-            st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
-            username = st.text_input("Nome de Usuário").lower()
-            email = st.text_input("Endereço de E-mail")
-            password = st.text_input("Senha", type="password")
-            função = st.selectbox("Função", ["Coletor", "Empresa"])
-            empresa = None
-            if função == "Empresa":
-                empresa = st.text_input("Nome da Empresa").lower()
-    
-            if st.button("Cadastrar"):
-                add_user(username, email, password, função, empresa)
-                st.success("Usuário cadastrado com sucesso!")
+# Página de cadastro
+def register():
+    with tab2:
+        st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
+        username = st.text_input("Nome de Usuário").lower()
+        email = st.text_input("Endereço de E-mail")
+        password = st.text_input("Senha", type="password")
+        função = st.selectbox("Função", ["Coletor", "Empresa"])
+        empresa = None
+        if função == "Empresa":
+            empresa = st.text_input("Nome da Empresa").lower()
+
+        if st.button("Cadastrar"):
+            add_user(username, email, password, função, empresa)
+            st.success("Usuário cadastrado com sucesso!")
 # Chamar a função register para exibir o formulário de cadastro na aba 2
 register()
 
