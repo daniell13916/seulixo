@@ -1,4 +1,3 @@
-
 import session_info
 import streamlit as st
 import psycopg2
@@ -39,6 +38,7 @@ def create_user_table():
     finally:
         if conn:
             conn.close()
+
 
 #cria a tabela caso tenha novo cadastro e ela não exista
 def create_empresa(nome_empresa):
@@ -303,6 +303,10 @@ def check_table_existence(senha_empresa, username, dia, mes, ano, volume):
                 return "Senha da empresa não encontrada."
     except psycopg2.Error as e:
         return f"Erro ao conectar ao banco de dados: {e}"
+
+# Configura o idioma para português
+locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+
 
 # Função para conectar ao banco de dados PostgreSQL, buscar os valores das colunas para uma linha específica
 # e criar um gráfico de pizza com base nesses valores
@@ -656,8 +660,3 @@ home()
 
 #Todas as versões do python e bibliotecas
 session_info.show()
-
-create_user_table()
-
-# Executar o site
-home()
