@@ -306,7 +306,7 @@ def check_table_existence(senha_empresa, username, dia, mes, ano, volume):
         return f"Erro ao conectar ao banco de dados: {e}"
 
 # Configura o idioma para português
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+#locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
 # Função para conectar ao banco de dados PostgreSQL, buscar os valores das colunas para uma linha específica
 # e criar um gráfico de pizza com base nesses valores
