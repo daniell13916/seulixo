@@ -1,4 +1,4 @@
-import session_info
+Fimport session_info
 import streamlit as st
 import psycopg2
 import time
@@ -158,60 +158,60 @@ tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 def home():
     with tab1:
         <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Site simples com html e css</title>
-</head>
-<body>
-    <nav>
-
-        <div class="logo">
-            <a href="index.html"> Matheus </a>
-        </div>
-
-        <ul>
-            <li> <a href="#"> Home </a> </li>
-            <li> <a href="#"> Sobre </a> </li>
-            <li> <a href="#"> Preços </a> </li>
-            <li> <a href="#"> Serviços </a> </li>
-            <li> <a href="#"> Contacto </a> </li>
-        </ul>
-
-    </nav>
-    <section class="banner">
-        <div class="texto">
-           <h1 class="titulo">Criar um site incrível somente</h1>
-           <h2 class="sub_titulo">usando HTML & CSS puro</h2>
-           <div class="botoes">
-               <button class="n-overlay">Saiba Mais</button>
-               <button class="overlay">Inscrever</button>
-           </div>
-        </div>
-    </section>
-</body>
-</html>
-
-
-
-    # Página de cadastro
-def register():
-    with tab2:
-        st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
-        username = st.text_input("Nome de Usuário").lower()
-        email = st.text_input("Endereço de E-mail")
-        password = st.text_input("Senha", type="password")
-        função = st.selectbox("Função", ["Coletor", "Empresa"])
-        empresa = None
-        if função == "Empresa":
-            empresa = st.text_input("Nome da Empresa").lower()
-
-        if st.button("Cadastrar"):
-            add_user(username, email, password, função, empresa)
-            st.success("Usuário cadastrado com sucesso!")
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Site simples com html e css</title>
+    </head>
+    <body>
+        <nav>
+    
+            <div class="logo">
+                <a href="index.html"> Matheus </a>
+            </div>
+    
+            <ul>
+                <li> <a href="#"> Home </a> </li>
+                <li> <a href="#"> Sobre </a> </li>
+                <li> <a href="#"> Preços </a> </li>
+                <li> <a href="#"> Serviços </a> </li>
+                <li> <a href="#"> Contacto </a> </li>
+            </ul>
+    
+        </nav>
+        <section class="banner">
+            <div class="texto">
+               <h1 class="titulo">Criar um site incrível somente</h1>
+               <h2 class="sub_titulo">usando HTML & CSS puro</h2>
+               <div class="botoes">
+                   <button class="n-overlay">Saiba Mais</button>
+                   <button class="overlay">Inscrever</button>
+               </div>
+            </div>
+        </section>
+    </body>
+    </html>
+    
+    
+    
+        # Página de cadastro
+    def register():
+        with tab2:
+            st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
+            username = st.text_input("Nome de Usuário").lower()
+            email = st.text_input("Endereço de E-mail")
+            password = st.text_input("Senha", type="password")
+            função = st.selectbox("Função", ["Coletor", "Empresa"])
+            empresa = None
+            if função == "Empresa":
+                empresa = st.text_input("Nome da Empresa").lower()
+    
+            if st.button("Cadastrar"):
+                add_user(username, email, password, função, empresa)
+                st.success("Usuário cadastrado com sucesso!")
 # Chamar a função register para exibir o formulário de cadastro na aba 2
 register()
 
