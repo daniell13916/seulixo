@@ -170,95 +170,56 @@ def home():
 
         st.markdown("""
             <style>
-                .image-container {
-                    width: 100%;
-                    text-align: center;
-                    margin-bottom: 20px;
+                @keyframes color-change {
+                    0% { color: #38b6ff; }
+                    50% { color: white; }
+                    100% { color: #38b6ff; }
                 }
 
-                .image-container img {
-                    max-width: 100%;
-                    height: auto;
+                .animated-text {
+                    animation: color-change 3s infinite;
+                    background-color: #96298F; /* roxo claro */
+                    padding: 20px;
                     border-radius: 10px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 }
             </style>
         """, unsafe_allow_html=True)
 
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59"></div>', 
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59" border="0" style="max-width: 100%; width: 100%;"></a></td><td style="width: 50%;"><p class="animated-text">Estamos felizes em cuidar do bem estar das pessoas.<br>Reciclar preserva o planeta.<br>Consulte-nos.</p></td></tr></table>', 
                 unsafe_allow_html=True)
 
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44"></div>', 
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/bicicletaseulixo.ZW5nfP"><img src="https://i.im.ge/2024/05/06/ZW5nfP.bicicletaseulixo.md.jpeg" alt="bicicletaseulixo" border="0" style="max-width: 100%; width: 100%;"></a></td><td style="width: 50%;"><div class="animated-text big-text">Veículos não poluentes</div><br><div class="animated-text">Utilizamos somente veículos não poluentes para transportar os resíduos, como os bike-triciclos de gaiola para condomínios pequenos, os Tuk Tuk elétricos para distâncias maiores e vias urbanas e o Eco-Truck elétrico com baú para coletas urbanas de maior distância.</div></td></tr></table>', 
                 unsafe_allow_html=True)
         
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWhZ5r.1691099049993.md.jpeg" alt="1691099049993"></div>', 
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/1691099049993.ZWmlJt"><img src="https://i.im.ge/2024/05/06/ZWm1ey.1691099049993.md.jpeg" alt="1691099049993" border="0" style="max-width: 100%; width: 100%;"></a></td><td style="width: 50%;"><div class="animated-text big-text">Reciclagem é nosso lema</div><br><div class="animated-text">Nossa missão é promover a reciclagem como um estilo de vida, incentivando a comunidade a reduzir, reutilizar e reciclar seus resíduos. Junte-se a nós nessa jornada para um futuro mais sustentável!</div></td></tr></table>', 
+                unsafe_allow_html=True)
+        
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Clientes SEU LIXO</h1>", unsafe_allow_html=True)
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWjLBW.DVILE.md.png" alt="DVILE" width="150" height="150"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWj91L.NUGUER.md.jpeg" alt="NUGUER" width="150" height="150"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWjmZx.EUDORA.jpeg" alt="EUDORA" width="150" height="150"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWjNhJ.RECICLA-CLUB.png" alt="RECICLA CLUB" width="150" height="150"></td></tr></table>', 
+         unsafe_allow_html=True)
+
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWm1ey.pasta.md.jpeg" alt="pasta" width="210" height="210"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWmSDS.divino.md.jpeg" alt="divino" width="210" height="210"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWmqv6.terra.md.jpeg" alt="terra" width="210" height="210"></td></tr><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWm6Nq.oli-pizza.md.jpeg" alt="oli pizza" width="210" height="210"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWmfMJ.OLI-POp.jpeg" alt="OLI POp" width="210" height="210"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWmkIy.banana.jpeg" alt="banana" width="210" height="210"></td></tr></table>', 
+         unsafe_allow_html=True)
+
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWwQQh.rota.md.jpeg" alt="rota" width="400"></td></tr></table>', 
+         unsafe_allow_html=True)
+
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Condomínios</h1>", unsafe_allow_html=True)
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWwxWX.jardin.md.jpeg" alt="jardin" width="325" height="325"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWwbUh.tambore.md.jpeg" alt="tambore" width="325" height="325"></td></tr><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWwg4Y.gavea.md.jpeg" alt="gavea" width="325" height="325"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZWwWt4.park.jpeg" alt="park" width="325" height="325"></td></tr></table>', 
                 unsafe_allow_html=True)
 
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWhzEc.1689353357634.md.jpeg" alt="1689353357634"></div>', 
-                unsafe_allow_html=True)
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Eventos</h1>", unsafe_allow_html=True)
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZW6OaS.corriga.jpeg" alt="corriga" width="325" height="325"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZW62H6.mov.md.jpeg" alt="mov" width="325" height="325"></td></tr></table>', 
+         unsafe_allow_html=True)
 
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWjLBW.DVILE.md.png" alt="DVILE"></div>', 
-                unsafe_allow_html=True)
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Escritório</h1>", unsafe_allow_html=True)
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZW691C.EEE.md.jpeg" alt="EEE" width="325" height="325"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZW66XP.ARIEL.md.jpeg" alt="ARIEL" width="325" height="325"></td></tr></table>', 
+         unsafe_allow_html=True)
 
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWj91L.NUGUER.md.jpeg" alt="NUGUER"></div>', 
-                unsafe_allow_html=True)
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Produtos</h1>", unsafe_allow_html=True)
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZW6tGm.caneta.md.jpeg" alt="caneta" width="325" height="325"></td><td style="text-align: center;"><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner" width="325" height="325"></td></tr></table>', 
+         unsafe_allow_html=True)
 
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWjmZx.EUDORA.jpeg" alt="EUDORA"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWjNhJ.RECICLA-CLUB.png" alt="RECICLA CLUB"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWm1ey.pasta.md.jpeg" alt="pasta"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWmSDS.divino.md.jpeg" alt="divino"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWmqv6.terra.md.jpeg" alt="terra"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWm6Nq.oli-pizza.md.jpeg" alt="oli pizza"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWmfMJ.OLI-POp.jpeg" alt="OLI POp"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWmkIy.banana.jpeg" alt="banana"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWwQQh.rota.md.jpeg" alt="rota"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWwxWX.jardin.md.jpeg" alt="jardin"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWwbUh.tambore.md.jpeg" alt="tambore"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWwg4Y.gavea.md.jpeg" alt="gavea"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWwWt4.park.jpeg" alt="park"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW6OaS.corriga.jpeg" alt="corriga"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW62H6.mov.md.jpeg" alt="mov"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW691C.EEE.md.jpeg" alt="EEE"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW66XP.ARIEL.md.jpeg" alt="ARIEL"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW6tGm.caneta.md.jpeg" alt="caneta"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner"></div>', 
-                unsafe_allow_html=True)
 
 # Página de cadastro
 def register():
