@@ -158,47 +158,122 @@ import streamlit as st
 
 def home():
     with tab1:
-        st.markdown("<h1 style='color: #38b6ff;'>Quem Somos</h1>", unsafe_allow_html=True)
-        st.markdown("""
-        <div style='color: #000000; width: 100%;'>
-        <p>Somos especialistas em gestão de resíduos e rejeitos não perigosos em condomínios residenciais, escritórios, bares, restaurantes, supermercados, escolas, universidades e eventos.</p>
-
-        <p>Cuidamos de todo o processo, desde a educação ambiental dos usuários até a destinação adequada dos materiais, enviados para recicladores parceiros. O resultado é economia e bem estar nos espaços onde atuamos, além da possibilidade de premiação pública e/ou privada para as boas práticas adotadas por nossos clientes.</p>
-
-        <p>O trabalho é executado por profissionais capacitados que recolhem os resíduos em veículos não poluentes ou de baixa emissão. Além da coleta seletiva, também implementamos processos para a compostagem da massa verde, resíduos orgânicos e gestão eficiente dos recursos energéticos e hídricos.</p>
-        </div>
-        """, unsafe_allow_html=True) 
-        st.markdown("<p style='font-size:20px'><span style='color: #000000;'>Nos convide para uma visita, a </span><span style='font-weight:bold; color: #38b6ff;'>SEU </span><span style='font-weight:bold; color: #000000;'>LIXO</span><span style='color: #000000;'> vai até você.</span></p>", unsafe_allow_html=True)
-
-        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59" border="0" style="max-width: 100%; max-height: 100%;"></a></td><td style="width: 50%;"><p class="animated-text">Estamos felizes em cuidar do bem estar das pessoas.<br>Reciclar preserva o planeta.<br>Consulte-nos.</p></td></tr></table>', 
-                unsafe_allow_html=True)
-        st.write(" ")
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44" width="330" height="430"></td><td><img src="https://i.im.ge/2024/05/06/ZWUgXS.d8693ed2-6672-40a7-a873-42d42ed04e1f.md.jpeg" alt="d8693ed2 6672 40a7 a873 42d42ed04e1f" width="330" height="430"></td></tr></table>', 
-                unsafe_allow_html=True)
-        st.write(" ")
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWhZ5r.1691099049993.md.jpeg" alt="1691099049993" width="330" height="430"></td><td><img src="https://i.im.ge/2024/05/06/ZWhzEc.1689353357634.md.jpeg" alt="1689353357634" width="330" height="430"></td></tr></table>', 
-                unsafe_allow_html=True)
-        st.write(" ")
-        st.markdown("""
-            <style>
-                @keyframes color-change {
-                    0% { color: #38b6ff; }
-                    50% { color: white; }
-                    100% { color: #38b6ff; }
-                }
-
-                .animated-text {
-                    animation: color-change 3s infinite;
-                    background-color: #96298F; /* roxo claro */
-                    padding: 20px;
-                    border-radius: 10px;
-                }
-            </style>
-        """, unsafe_allow_html=True)
-
-        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Clientes SEU LIXO</h1>", unsafe_allow_html=True)
-        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWjLBW.DVILE.md.png" alt="DVILE" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjm47.ZETRA.md.png" alt="ZETRA" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjOLg.DISTRITO9.md.png" alt="DISTRITO9" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjIqF.LAMPADARIO.md.png" alt="LAMPADARIO" width="150" height="150"></td></tr></table>', 
-                unsafe_allow_html=True)
+        # Adiciona o modelo HTML e CSS
+        display(HTML('''
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>complete responsive coffee shop website design</title>
+                <!-- font awesome cdn link  -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                <!-- custom css file link  -->
+                <link rel="stylesheet" href="css/style.css">
+            </head>
+            <body>
+                <!-- header section starts  -->
+                <header class="header">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                    <nav class="navbar">
+                        <a href="#home">home</a>
+                        <a href="#about">about</a>
+                        <a href="#menu">menu</a>
+                        <a href="#products">products</a>
+                        <a href="#review">review</a>
+                        <a href="#contact">contact</a>
+                        <a href="#blogs">blogs</a>
+                    </nav>
+                    <div class="icons">
+                        <div class="fas fa-search" id="search-btn"></div>
+                        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+                        <div class="fas fa-bars" id="menu-btn"></div>
+                    </div>
+                    <div class="search-form">
+                        <input type="search" id="search-box" placeholder="search here...">
+                        <label for="search-box" class="fas fa-search"></label>
+                    </div>
+                    <div class="cart-items-container">
+                        <div class="cart-item">
+                            <span class="fas fa-times"></span>
+                            <img src="images/cart-item-1.png" alt="">
+                            <div class="content">
+                                <h3>cart item 01</h3>
+                                <div class="price">$15.99/-</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <span class="fas fa-times"></span>
+                            <img src="images/cart-item-2.png" alt="">
+                            <div class="content">
+                                <h3>cart item 02</h3>
+                                <div class="price">$15.99/-</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <span class="fas fa-times"></span>
+                            <img src="images/cart-item-3.png" alt="">
+                            <div class="content">
+                                <h3>cart item 03</h3>
+                                <div class="price">$15.99/-</div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <span class="fas fa-times"></span>
+                            <img src="images/cart-item-4.png" alt="">
+                            <div class="content">
+                                <h3>cart item 04</h3>
+                                <div class="price">$15.99/-</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn">checkout now</a>
+                    </div>
+                </header>
+                <!-- header section ends -->
+                <!-- home section starts  -->
+                <section class="home" id="home">
+                    <div class="content">
+                        <h3>fresh coffee in the morning</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate distinctio tempora reiciendis.</p>
+                        <a href="#" class="btn">get yours now</a>
+                    </div>
+                </section>
+                <!-- home section ends -->
+                <!-- about section starts  -->
+                <section class="about" id="about">
+                    <h1 class="heading"> <span>about</span> us </h1>
+                    <div class="row">
+                        <div class="image">
+                            <img src="images/about-img.jpeg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>what makes our coffee special?</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui ea ullam, enim tempora ipsum fuga alias quae ratione a officiis id temporibus autem? Quod nemo facilis cupiditate. Ex, vel?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit amet enim quod veritatis, nihil voluptas culpa! Neque consectetur obcaecati sapiente?</p>
+                            <a href="#" class="btn">learn more</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- about section ends -->
+                <!-- menu section starts  -->
+                <section class="menu" id="menu">
+                    <h1 class="heading"> our <span>menu</span> </h1>
+                    <div class="box-container">
+                        <div class="box">
+                            <img src="images/menu-1.png" alt="">
+                            <h3>tasty and healty</h3>
+                            <div class="price">$15.99 <span>20.99</span></div>
+                            <a href="#" class="btn">add to cart</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- menu section ends -->
+            </body>
+            </html>
+        '''))
 
 def register():
     with tab2:
