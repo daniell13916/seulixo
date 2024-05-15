@@ -155,11 +155,12 @@ st.markdown(
 st.markdown("<div class='container'><div class='background-image'></div></div>", unsafe_allow_html=True)
 
 
-tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
+#tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
+tab2, tab3 = st.tabs([ "Cadastro", "Relatório de Coleta"])
 
-def home():
-    with tab1:
-        st.write("Aba inicial em manutenção")
+#def home():
+#    with tab1:
+#        st.write("Aba inicial em manutenção")
 
 def register():
     with tab2:
