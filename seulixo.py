@@ -159,8 +159,8 @@ st.markdown("<div class='container'><div class='background-image'></div></div>",
 tab2, tab3 = st.tabs([ "Cadastro", "Relatório de Coleta"])
 
 def home():
-#    with tab1:
-#        st.write("Aba inicial em manutenção")
+    with tab1:
+        st.write("Aba inicial em manutenção")
 
 def register():
     with tab2:
