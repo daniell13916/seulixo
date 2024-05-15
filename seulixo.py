@@ -154,6 +154,8 @@ st.markdown("<div class='container'><div class='background1-image1'></div></div>
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 
+import streamlit as st
+
 def home():
     with tab1:
         st.markdown("<h1 style='color: #38b6ff;'>Quem Somos</h1>", unsafe_allow_html=True)
@@ -168,6 +170,15 @@ def home():
         """, unsafe_allow_html=True) 
         st.markdown("<p style='font-size:20px'><span style='color: #000000;'>Nos convide para uma visita, a </span><span style='font-weight:bold; color: #38b6ff;'>SEU </span><span style='font-weight:bold; color: #000000;'>LIXO</span><span style='color: #000000;'> vai até você.</span></p>", unsafe_allow_html=True)
 
+        st.write('<table style="border: none; width: 100%;"><tr><td style="text-align: center; width: 50%;"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59" border="0" style="max-width: 100%; max-height: 100%;"></a></td><td style="width: 50%;"><p class="animated-text">Estamos felizes em cuidar do bem estar das pessoas.<br>Reciclar preserva o planeta.<br>Consulte-nos.</p></td></tr></table>', 
+                unsafe_allow_html=True)
+        st.write(" ")
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44" width="330" height="430"></td><td><img src="https://i.im.ge/2024/05/06/ZWUgXS.d8693ed2-6672-40a7-a873-42d42ed04e1f.md.jpeg" alt="d8693ed2 6672 40a7 a873 42d42ed04e1f" width="330" height="430"></td></tr></table>', 
+                unsafe_allow_html=True)
+        st.write(" ")
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWhZ5r.1691099049993.md.jpeg" alt="1691099049993" width="330" height="430"></td><td><img src="https://i.im.ge/2024/05/06/ZWhzEc.1689353357634.md.jpeg" alt="1689353357634" width="330" height="430"></td></tr></table>', 
+                unsafe_allow_html=True)
+        st.write(" ")
         st.markdown("""
             <style>
                 @keyframes color-change {
@@ -182,54 +193,12 @@ def home():
                     padding: 20px;
                     border-radius: 10px;
                 }
-
-                .image-container {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    margin-bottom: 20px;
-                }
-
-                .image-container img {
-                    max-width: 100%;
-                    height: auto;
-                    margin: 5px;
-                }
             </style>
         """, unsafe_allow_html=True)
 
-        st.write('<div class="image-container"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59" border="0"></a><p class="animated-text">Estamos felizes em cuidar do bem estar das pessoas.<br>Reciclar preserva o planeta.<br>Consulte-nos.</p></div>', 
-                unsafe_allow_html=True)
-        
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44"><img src="https://i.im.ge/2024/05/06/ZWUgXS.d8693ed2-6672-40a7-a873-42d42ed04e1f.md.jpeg" alt="d8693ed2 6672 40a7 a873 42d42ed04e1f"></div>', 
-                unsafe_allow_html=True)
-        
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWhZ5r.1691099049993.md.jpeg" alt="1691099049993"><img src="https://i.im.ge/2024/05/06/ZWhzEc.1689353357634.md.jpeg" alt="1689353357634"></div>', 
-                unsafe_allow_html=True)
-        
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWm1ey.pasta.md.jpeg" alt="pasta"><img src="https://i.im.ge/2024/05/06/ZWmSDS.divino.md.jpeg" alt="divino"><img src="https://i.im.ge/2024/05/06/ZWmqv6.terra.md.jpeg" alt="terra"><img src="https://i.im.ge/2024/05/06/ZWm6Nq.oli-pizza.md.jpeg" alt="oli pizza"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWmfMJ.OLI-POp.jpeg" alt="OLI POp"><img src="https://i.im.ge/2024/05/06/ZWmkIy.banana.jpeg" alt="banana"></div>', 
-                unsafe_allow_html=True)
-
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWwQQh.rota.md.jpeg" alt="rota"></div>', 
-                unsafe_allow_html=True)
-        
         st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Clientes SEU LIXO</h1>", unsafe_allow_html=True)
-        
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWjLBW.DVILE.md.png" alt="DVILE"><img src="https://i.im.ge/2024/05/06/ZWj91L.NUGUER.md.jpeg" alt="NUGUER"><img src="https://i.im.ge/2024/05/06/ZWjmZx.EUDORA.jpeg" alt="EUDORA"><img src="https://i.im.ge/2024/05/06/ZWjNhJ.RECICLA-CLUB.png" alt="RECICLA CLUB"></div>', 
-         unsafe_allow_html=True)
-        
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW66XP.ARIEL.md.jpeg" alt="ARIEL"><img src="https://i.im.ge/2024/05/06/ZW6tGm.caneta.md.jpeg" alt="caneta"></div>', 
-         unsafe_allow_html=True)
-        
-        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Produtos</h1>", unsafe_allow_html=True)
-        
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner"><img src="https://i.im.ge/2024/05/06/ZWwWt4.park.jpeg" alt="park"></div>', 
-         unsafe_allow_html=True)
-
-
+        st.write('<table style="border: none;"><tr><td><img src="https://i.im.ge/2024/05/06/ZWjLBW.DVILE.md.png" alt="DVILE" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjm47.ZETRA.md.png" alt="ZETRA" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjOLg.DISTRITO9.md.png" alt="DISTRITO9" width="150" height="150"></td><td><img src="https://i.im.ge/2024/05/06/ZWjIqF.LAMPADARIO.md.png" alt="LAMPADARIO" width="150" height="150"></td></tr></table>', 
+                unsafe_allow_html=True)
 
 def register():
     with tab2:
