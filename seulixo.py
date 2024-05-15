@@ -155,26 +155,10 @@ st.markdown("<div class='container'><div class='background1-image1'></div></div>
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 
-def main():
-    st.set_page_config(page_title='Coffee Shop Website')
+def home():
+    with tab1:
+        st.write("Aba inicial em manutenção")
 
-    # Função para exibir a seção "Home"
-    def home():
-        st.write("""
-        <section class="home" id="home">
-            <div class="content">
-                <h3>fresh coffee in the morning</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat labore, sint cupiditate distinctio tempora reiciendis.</p>
-                <a href="#" class="btn">get yours now</a>
-            </div>
-        </section>
-        """)
-
-    # Exibir a seção "Home"
-    home()
-
-if __name__ == "__main__":
-    main()
 def register():
     with tab2:
         st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
