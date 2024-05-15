@@ -184,35 +184,51 @@ def home():
                 }
 
                 .image-container {
-                    display: inline-block;
-                    width: 45%;
-                    margin-right: 20px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
                     margin-bottom: 20px;
                 }
 
                 .image-container img {
                     max-width: 100%;
                     height: auto;
+                    margin: 5px;
                 }
             </style>
         """, unsafe_allow_html=True)
 
-        st.write('<div class="image-container"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59"></a></div>', 
-                unsafe_allow_html=True)
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44"></div>', 
-                unsafe_allow_html=True)
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWUgXS.d8693ed2-6672-40a7-a873-42d42ed04e1f.md.jpeg" alt="d8693ed2 6672 40a7 a873 42d42ed04e1f"></div>', 
-                unsafe_allow_html=True)
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWm1ey.pasta.md.jpeg" alt="pasta"></div>', 
-                unsafe_allow_html=True)
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWmSDS.divino.md.jpeg" alt="divino"></div>', 
-                unsafe_allow_html=True)
-        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWmqv6.terra.md.jpeg" alt="terra"></div>', 
+        st.write('<div class="image-container"><a href="https://im.ge/i/WhatsApp-Image-2023-02-20-at-19-54-59.ZWiFf8"><img src="https://i.im.ge/2024/05/06/ZWiFf8.WhatsApp-Image-2023-02-20-at-19-54-59.md.jpeg" alt="WhatsApp Image 2023 02 20 at 19 54 59" border="0" style="max-width: 100%; max-height: 100%;"></a><p class="animated-text">Estamos felizes em cuidar do bem estar das pessoas.<br>Reciclar preserva o planeta.<br>Consulte-nos.</p></div>', 
                 unsafe_allow_html=True)
         
-        # Adicione o restante do código aqui...
+        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWUtBc.WhatsApp-Image-2023-04-22-at-09-52-44.md.jpeg" alt="WhatsApp Image 2023 04 22 at 09 52 44" width="330" height="430"><img src="https://i.im.ge/2024/05/06/ZWUgXS.d8693ed2-6672-40a7-a873-42d42ed04e1f.md.jpeg" alt="d8693ed2 6672 40a7 a873 42d42ed04e1f" width="330" height="430"></div>', 
+                unsafe_allow_html=True)
+        
+        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWhZ5r.1691099049993.md.jpeg" alt="1691099049993" width="330" height="430"><img src="https://i.im.ge/2024/05/06/ZWhzEc.1689353357634.md.jpeg" alt="1689353357634" width="330" height="430"></div>', 
+                unsafe_allow_html=True)
+        
+        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWm1ey.pasta.md.jpeg" alt="pasta" width="210" height="210"><img src="https://i.im.ge/2024/05/06/ZWmSDS.divino.md.jpeg" alt="divino" width="210" height="210"><img src="https://i.im.ge/2024/05/06/ZWmqv6.terra.md.jpeg" alt="terra" width="210" height="210"><img src="https://i.im.ge/2024/05/06/ZWm6Nq.oli-pizza.md.jpeg" alt="oli pizza" width="210" height="210"></div>', 
+                unsafe_allow_html=True)
 
-# Página de cadastro
+        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWmfMJ.OLI-POp.jpeg" alt="OLI POp" width="210" height="210"><img src="https://i.im.ge/2024/05/06/ZWmkIy.banana.jpeg" alt="banana" width="210" height="210"></div>', 
+                unsafe_allow_html=True)
+
+        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWwQQh.rota.md.jpeg" alt="rota" width="400"></div>', 
+                unsafe_allow_html=True)
+        
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Clientes SEU LIXO</h1>", unsafe_allow_html=True)
+        
+        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZWjLBW.DVILE.md.png" alt="DVILE" width="150" height="150"><img src="https://i.im.ge/2024/05/06/ZWj91L.NUGUER.md.jpeg" alt="NUGUER" width="150" height="150"><img src="https://i.im.ge/2024/05/06/ZWjmZx.EUDORA.jpeg" alt="EUDORA" width="150" height="150"><img src="https://i.im.ge/2024/05/06/ZWjNhJ.RECICLA-CLUB.png" alt="RECICLA CLUB" width="150" height="150"></div>', 
+         unsafe_allow_html=True)
+        
+        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW66XP.ARIEL.md.jpeg" alt="ARIEL" width="325" height="325"><img src="https://i.im.ge/2024/05/06/ZW6tGm.caneta.md.jpeg" alt="caneta" width="325" height="325"></div>', 
+         unsafe_allow_html=True)
+        
+        st.markdown("<h1 style='color: #38b6ff; text-align: center;'>Produtos</h1>", unsafe_allow_html=True)
+        
+        st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner" width="325" height="325"><img src="https://i.im.ge/2024/05/06/ZWwWt4.park.jpeg" alt="park" width="325" height="325"></div>', 
+         unsafe_allow_html=True)
+
 def register():
     with tab2:
         st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
