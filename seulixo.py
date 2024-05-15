@@ -195,6 +195,12 @@ def home():
                     height: auto;
                     margin: 5px;
                 }
+
+                @media only screen and (max-width: 600px) {
+                    .image-container img {
+                        max-width: 90%;
+                    }
+                }
             </style>
         """, unsafe_allow_html=True)
 
@@ -228,6 +234,7 @@ def home():
         
         st.write('<div class="image-container"><img src="https://i.im.ge/2024/05/06/ZW6gXG.conteiner.md.jpeg" alt="conteiner" width="325" height="325"><img src="https://i.im.ge/2024/05/06/ZWwWt4.park.jpeg" alt="park" width="325" height="325"></div>', 
          unsafe_allow_html=True)
+
 
 def register():
     with tab2:
