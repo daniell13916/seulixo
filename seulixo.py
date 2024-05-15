@@ -589,6 +589,7 @@ def home():
                     
                     </body>
                     </html>
+                    '''))
 
 def register():
     with tab2:
