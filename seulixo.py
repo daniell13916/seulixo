@@ -1,3 +1,4 @@
+from streamlit.components.v1 import html
 import streamlit as st
 import psycopg2
 import time
