@@ -136,13 +136,14 @@ st.markdown(
     .container {
         text-align: center;
     }
-    .background1-image1 {
+    .background-image {
         background-image: url('https://i.im.ge/2024/05/06/ZRUJ9S.WhatsApp-Image-2024-05-05-at-5-41-21-PM-Photoroom-png-Photoroom.md.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 23vh; /* Ajustar conforme necessário */
-        width: 40%; /* Ajustar conforme necessário */
+        height: 0;
+        padding-top: 56.25%; /* Proporção de 16:9 (9 dividido por 16 = 0.5625 ou 56.25%) */
+        width: 80%; /* Ajuste conforme necessário */
         display: inline-block;
     }
     </style>
@@ -151,7 +152,8 @@ st.markdown(
 )
 
 # Adiciona a div da imagem de fundo dentro de um contêiner centralizado
-st.markdown("<div class='container'><div class='background1-image1'></div></div>", unsafe_allow_html=True)
+st.markdown("<div class='container'><div class='background-image'></div></div>", unsafe_allow_html=True)
+
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 
