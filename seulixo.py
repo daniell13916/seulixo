@@ -160,7 +160,7 @@ tab2, tab3 = st.tabs([ "Cadastro", "Relatório de Coleta"])
 
 def home():
     #with tab1:
-    st.write("Aba inicial em manutenção")
+    st.write(" ")
 
 def register():
     with tab2:
