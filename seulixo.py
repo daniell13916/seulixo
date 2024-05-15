@@ -129,12 +129,14 @@ def check_user(username_or_email, password):
         cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username_or_email, username_or_email))
         return cur.fetchone() is not None
 
-# Adiciona o estilo CSS para a div da imagem de fundo
+# Adiciona o estilo CSS para a div da imagem de fundo e para o contêiner
 st.markdown(
     """
     <style>
     .container {
         text-align: center;
+        background-color: white; /* Adiciona um fundo branco ao contêiner */
+        padding: 20px; /* Adiciona um espaçamento interno para evitar que a imagem toque nas bordas */
     }
     .background-image {
         background-image: url('https://i.im.ge/2024/05/06/ZRUJ9S.WhatsApp-Image-2024-05-05-at-5-41-21-PM-Photoroom-png-Photoroom.md.png');
