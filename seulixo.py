@@ -148,6 +148,24 @@ st.markdown(
         width: 80%; /* Ajuste conforme necessário */
         display: inline-block;
     }
+    /* Media query para telas menores */
+    @media (max-width: 768px) {
+        .background-image {
+            width: 100%; /* Ajuste conforme necessário para telas menores */
+        }
+    }
+    /* Media query para telas menores que 640px */
+    @media (max-width: 640px) {
+        .background-image {
+            width: 100%; /* Ajuste conforme necessário para telas menores */
+        }
+    }
+    /* Media query para telas muito pequenas */
+    @media (max-width: 480px) {
+        .background-image {
+            width: 100%; /* Ajuste conforme necessário para telas muito pequenas */
+        }
+    }
     </style>
     """
     , unsafe_allow_html=True
