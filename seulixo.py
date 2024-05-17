@@ -142,17 +142,17 @@ st.markdown(
         background-position: center;
         background-repeat: no-repeat;
         height: 0;
-        padding-top: 56.25%; /* Proporção de 16:9 (9 dividido por 16 = 0.5625 ou 56.25%) */
+        padding-top: 56.25%; /* Proporção de 16:9 */
         display: inline-block;
     }
     .background-image-1 {
         background-image: url('https://i.im.ge/2024/05/06/ZRUJ9S.WhatsApp-Image-2024-05-05-at-5-41-21-PM-Photoroom-png-Photoroom.md.png');
-        width: 100%; /* Largura padrão para a primeira imagem */
+        width: 100%;
     }
     .background-image-2 {
-        background-image: url('https://private-user-images.githubusercontent.com/152323615/331724309-3517502a-d874-4759-b75c-5b7f9c5d3912.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTU5NzgyOTAsIm5iZiI6MTcxNTk3Nzk5MCwicGF0aCI6Ii8xNTIzMjM2MTUvMzMxNzI0MzA5LTM1MTc1MDJhLWQ4NzQtNDc1OS1iNzVjLTViN2Y5YzVkMzkxMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVk9RREZWT1JGU0tRJTJGMjAyNDA1MTclMkZ1cy1lYXN0LTElMkZzMzElMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUxN1QyMDMzMTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05M2E0NzVkMTFkNDk0YjlkOTJkOWY5NWY4NDI5M2UwNGJhZTI2OGZlNDlmMGFkZmE3MDEyMWE0OGYxZDlmNTEwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.qHtQu8lIT_U5thivTzgBxwpZm8XoVki_oRMbiFX5ggw');
+        background-image: url('https://photos.fife.usercontent.google.com/pw/AP1GczOWv_YfrYPeejUzj0d3g4Xt5U9jk7x6cD9wcx0hMkdekvDZOsKgodjE=w1600-h900-s-no-gm?authuser=0');
         background-size: contain; /* Mantém a proporção da imagem sem cortar */
-        width: 100%; /* Largura de 100% para ocupar todo o contêiner */
+        width: 100%;
         height: 0;
         padding-top: 56.25%; /* Proporção de 16:9 para a imagem */
     }
