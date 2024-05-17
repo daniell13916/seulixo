@@ -150,9 +150,10 @@ st.markdown(
         width: 100%; /* Largura padrão para a primeira imagem */
     }
     .background-image-2 {
-        background-image: url('https://raw.githubusercontent.com/daniell13916/seulixo/main/imagens/conhinhoes1_(2)-transformed.png');
+        background-image: url('https://github.com/daniell13916/seulixo/blob/main/imagens/conhinhoes1_(2)-transformed.png?raw=true');
         width: 100%; /* Largura de 100% para ocupar todo o contêiner */
         height: auto; /* Altura automática para manter a proporção */
+        background-size: contain; /* Mantém a proporção da imagem sem cortar */
     }
 
     /* Media query para telas menores */
