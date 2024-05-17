@@ -129,7 +129,6 @@ def check_user(username_or_email, password):
         cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username_or_email, username_or_email))
         return cur.fetchone() is not None
 
-# Adiciona o estilo CSS para a div da imagem de fundo e para o contêiner
 st.markdown(
     """
     <style>
@@ -137,17 +136,27 @@ st.markdown(
         text-align: center;
         background-color: white; /* Adiciona um fundo branco ao contêiner */
         padding: 20px; /* Adiciona um espaçamento interno para evitar que a imagem toque nas bordas */
+        margin-bottom: 20px; /* Espaçamento entre as imagens */
     }
     .background-image {
-        background-image: url('https://i.im.ge/2024/05/06/ZRUJ9S.WhatsApp-Image-2024-05-05-at-5-41-21-PM-Photoroom-png-Photoroom.md.png');
-        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 0;
         padding-top: 56.25%; /* Proporção de 16:9 (9 dividido por 16 = 0.5625 ou 56.25%) */
-        width: 80%; /* Ajuste conforme necessário */
         display: inline-block;
     }
+    .background-image-1 {
+        background-image: url('https://i.im.ge/2024/05/06/ZRUJ9S.WhatsApp-Image-2024-05-05-at-5-41-21-PM-Photoroom-png-Photoroom.md.png');
+        width: 100%; /* Largura padrão para a primeira imagem */
+    }
+    .background-image-2 {
+        background-image: url('https://raw.githubusercontent.com/daniell13916/seulixo/main/imagens/conhinhoes1_(2)-transformed.png');
+        background-size: contain; /* Mantém a proporção da imagem sem cortar */
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        width: 100%; /* Largura de 100% para ocupar todo o contêiner */
+        height: 100%; /* Altura de 100% para ocupar todo o contêiner */
+    }
+
     /* Media query para telas menores */
     @media (max-width: 768px) {
         .background-image {
@@ -171,8 +180,9 @@ st.markdown(
     , unsafe_allow_html=True
 )
 
-# Adiciona a div da imagem de fundo dentro de um contêiner centralizado
-st.markdown("<div class='container'><div class='background-image'></div></div>", unsafe_allow_html=True)
+# Adiciona as divs das imagens de fundo dentro de contêineres centralizados
+st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
+st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
 
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
