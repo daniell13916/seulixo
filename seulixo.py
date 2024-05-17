@@ -152,7 +152,7 @@ st.markdown(
         width: 100%;
     }
     .background-image-2 {
-        background-image: url('https://photos.google.com/share/AF1QipNZ4yF8TYIB-opaW3ccIOm-U6J_GuvB6Q8RJClFibP9N3NiTnyxtmXxjjgz9sx0Tg/photo/AF1QipOqbbAk3i2Y0ZjJl5RdMxJn7DD6fYPcx6jHgg8I?key=STNTdF9qVUpkbXpLVjFkUkNMQldfSnZKeklsWHh3');
+        background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNxfTwwWbmgFkT2z_-f0gXmyfKZL-NN7MPTrdgTmczbhr8YXi7XlgO-8w181PALWWJws73uJPGHGUMTxMHVPzXo0wr9FwDTlMNf_MgurOJCQWT4bAD8a0CEDlIBI8KmNa_Mw_9vE5G1rC7FcfQiq4p0=w1600-h900-s-no-gm?authuser=0');
         background-size: contain; /* Mantém a proporção da imagem sem cortar */
         width: 100%;
         height: 0;
@@ -185,7 +185,6 @@ st.markdown(
 # Adiciona as divs das imagens de fundo dentro de contêineres centralizados
 st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
 st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
-
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 #tab2, tab3 = st.tabs([ "Cadastro", "Relatório de Coleta"])
