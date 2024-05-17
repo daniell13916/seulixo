@@ -150,10 +150,11 @@ st.markdown(
         width: 100%; /* Largura padrão para a primeira imagem */
     }
     .background-image-2 {
-        background-image: url('https://github.com/daniell13916/seulixo/blob/main/imagens/conhinhoes1_(2)-transformed.png?raw=true');
-        width: 100%; /* Largura de 100% para ocupar todo o contêiner */
-        height: auto; /* Altura automática para manter a proporção */
+        background-image: url('https://private-user-images.githubusercontent.com/152323615/331724309-3517502a-d874-4759-b75c-5b7f9c5d3912.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTU5NzgyOTAsIm5iZiI6MTcxNTk3Nzk5MCwicGF0aCI6Ii8xNTIzMjM2MTUvMzMxNzI0MzA5LTM1MTc1MDJhLWQ4NzQtNDc1OS1iNzVjLTViN2Y5YzVkMzkxMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVk9RREZWT1JGU0tRJTJGMjAyNDA1MTclMkZ1cy1lYXN0LTElMkZzMzElMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUxN1QyMDMzMTBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05M2E0NzVkMTFkNDk0YjlkOTJkOWY5NWY4NDI5M2UwNGJhZTI2OGZlNDlmMGFkZmE3MDEyMWE0OGYxZDlmNTEwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.qHtQu8lIT_U5thivTzgBxwpZm8XoVki_oRMbiFX5ggw');
         background-size: contain; /* Mantém a proporção da imagem sem cortar */
+        width: 100%; /* Largura de 100% para ocupar todo o contêiner */
+        height: 0;
+        padding-top: 56.25%; /* Proporção de 16:9 para a imagem */
     }
 
     /* Media query para telas menores */
@@ -182,8 +183,6 @@ st.markdown(
 # Adiciona as divs das imagens de fundo dentro de contêineres centralizados
 st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
 st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
-
-
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 #tab2, tab3 = st.tabs([ "Cadastro", "Relatório de Coleta"])
