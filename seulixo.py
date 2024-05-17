@@ -152,7 +152,7 @@ st.markdown(
         width: 100%;
     }
     .background-image-2 {
-        background-image: url('https://example.com/your-direct-image-link.png'); /* Substitua pelo link direto da imagem */
+        background-image: url('https://photos.google.com/share/AF1QipNZ4yF8TYIB-opaW3ccIOm-U6J_GuvB6Q8RJClFibP9N3NiTnyxtmXxjjgz9sx0Tg/photo/AF1QipOqbbAk3i2Y0ZjJl5RdMxJn7DD6fYPcx6jHgg8I?key=STNTdF9qVUpkbXpLVjFkUkNMQldfSnZKeklsWHh3');
         background-size: contain; /* Mantém a proporção da imagem sem cortar */
         width: 100%;
         height: 0;
@@ -185,6 +185,7 @@ st.markdown(
 # Adiciona as divs das imagens de fundo dentro de contêineres centralizados
 st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
 st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
+
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 #tab2, tab3 = st.tabs([ "Cadastro", "Relatório de Coleta"])
