@@ -151,10 +151,8 @@ st.markdown(
     }
     .background-image-2 {
         background-image: url('https://raw.githubusercontent.com/daniell13916/seulixo/main/imagens/conhinhoes1_(2)-transformed.png');
-        background-size: contain; /* Mantém a proporção da imagem sem cortar */
-        background-repeat: no-repeat; /* Impede a repetição da imagem */
         width: 100%; /* Largura de 100% para ocupar todo o contêiner */
-        height: 100%; /* Altura de 100% para ocupar todo o contêiner */
+        height: auto; /* Altura automática para manter a proporção */
     }
 
     /* Media query para telas menores */
@@ -183,6 +181,7 @@ st.markdown(
 # Adiciona as divs das imagens de fundo dentro de contêineres centralizados
 st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
 st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
+
 
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
