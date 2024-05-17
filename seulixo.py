@@ -129,6 +129,8 @@ def check_user(username_or_email, password):
         cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username_or_email, username_or_email))
         return cur.fetchone() is not None
 
+import streamlit as st
+
 st.markdown(
     """
     <style>
@@ -150,7 +152,7 @@ st.markdown(
         width: 100%;
     }
     .background-image-2 {
-        background-image: url('https://photos.fife.usercontent.google.com/pw/AP1GczOWv_YfrYPeejUzj0d3g4Xt5U9jk7x6cD9wcx0hMkdekvDZOsKgodjE=w1600-h900-s-no-gm?authuser=0');
+        background-image: url('https://example.com/your-direct-image-link.png'); /* Substitua pelo link direto da imagem */
         background-size: contain; /* Mantém a proporção da imagem sem cortar */
         width: 100%;
         height: 0;
