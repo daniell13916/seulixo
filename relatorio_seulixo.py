@@ -30,31 +30,6 @@ conn = psycopg2.connect(
     password="postgres"
 )
 
-def create_user_table():
-    try:
-        with conn:
-            with conn.cursor() as cur:
-                # Criar a tabela de usuários dentro do esquema "public"
-                cur.execute("""
-                    CREATE TABLE IF NOT EXISTS users (
-                        id SERIAL PRIMARY KEY,
-                        username VARCHAR(50) UNIQUE NOT NULL,
-                        email VARCHAR(100) UNIQUE NOT NULL,
-                        password VARCHAR(255) NOT NULL,
-                        função VARCHAR(20) NOT NULL,
-                        empresa VARCHAR(100) DEFAULT NULL,
-                        acesso BOOLEAN DEFAULT FALSE
-                    );
-                """)
-        # Commit a transação após a criação da tabela
-        conn.commit()
-    except psycopg2.Error as e:
-        st.error(f"Erro ao criar tabela de usuários: {e}")
-    finally:
-        if conn:
-            conn.close()
-
-
 #cria a tabela caso tenha novo cadastro e ela não exista
 def create_empresa(nome_empresa):
     try:
@@ -79,44 +54,6 @@ def create_empresa(nome_empresa):
                 st.warning(f"A tabela para a empresa '{nome_empresa}' já existe.")
     except psycopg2.Error as e:
         st.error(f"Não foi possível criar a tabela para a empresa '{nome_empresa}': {e}")
-
-#adiciona novo usuário na tabela users, podendo sem empresa ou coletor
-def add_user(username, email, password, função, empresa=None):
-    try:
-        if not email:
-            raise ValueError("Por favor, insira um endereço de e-mail.")
-        if len(username) < 5:
-            raise ValueError("O nome de usuário deve ter no mínimo 5 caracteres.")
-        if len(password) < 5:
-            raise ValueError("A senha deve ter no mínimo 5 caracteres.")
-        if função not in ["Coletor", "Empresa", "Administrador"]:
-            raise ValueError("Função inválida. Escolha entre 'Coletor', 'Empresa' ou 'Administrador'.")
-
-        with conn.cursor() as cur:
-            # Verifica se o nome de usuário ou e-mail já existem na base de dados
-            cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username, email))
-            existing_user = cur.fetchone()
-            if existing_user:
-                raise ValueError("Usuário ou e-mail já cadastrados. Por favor, altere ou utilize os já existentes.")
-            
-            # Convertendo a empresa para minúsculo se não for None
-            empresa_lower = empresa.lower() if empresa else None
-            
-            cur.execute("INSERT INTO users (username, email, password, função, empresa) VALUES (%s, %s, %s, %s, %s);",
-                        (username, email, password, função.capitalize(), empresa_lower))
-            
-            # Verifica se já existe uma tabela com o nome da empresa em "Dados de coleta"
-            if função.lower() == "empresa":
-                cur.execute("SELECT EXISTS(SELECT 1 FROM information_schema.tables WHERE table_schema = 'Dados de coleta' AND table_name = %s);", (empresa_lower,))
-                table_exists = cur.fetchone()[0]
-                if not table_exists:
-                    # Se a tabela não existe, cria ela
-                    create_empresa(empresa_lower)
-        conn.commit()
-    except ValueError as e:
-        st.error(str(e))
-    except Exception as e:
-        st.error("Erro ao cadastrar usuário. Por favor, tente novamente mais tarde.")
 
 #para saber se o usuário ta online ou não
 def on_session_state_changed():
@@ -145,41 +82,8 @@ def check_user(username_or_email, password):
         return cur.fetchone() is not None
 
 
-def home():
-    st.write(" ")
 
-def register():
-    st.write(" ")
-register()
 
-#ve se a tabela já existe e se tiver vai add os dados e se não tiver vai criar tabela com base na função create_empresa
-def check_table_existence(senha_empresa, username, dia, mes, ano, volume):
-    try:
-        # Abrir um cursor para executar consultas SQL
-        with conn.cursor() as cur:
-            # Consulta SQL para verificar se a senha existe na tabela users e obter o ID e a empresa
-            cur.execute("SELECT id, empresa FROM public.users WHERE password = %s;", (senha_empresa,))
-            empresa_info = cur.fetchone()
-            if empresa_info:
-                user_id, empresa = empresa_info
-                
-                # Verificar a existência da tabela
-                cur.execute("SELECT EXISTS(SELECT 1 FROM information_schema.tables WHERE table_schema = 'Dados de coleta' AND table_name = %s);", (empresa,))
-                table_exists = cur.fetchone()[0]
-                if table_exists:
-                    # Insere os dados na tabela existente
-                    cur.execute(f"""
-                        INSERT INTO "Dados de coleta".{empresa} (data, mes, ano, volume, nome_coletor)
-                        VALUES (%s, %s, %s, %s, %s);
-                    """, (f'{ano}-{mes}-{dia}', mes, ano, volume, username))
-                    conn.commit()
-                    return f"Dados inseridos na tabela '{empresa}'."
-                else:
-                    return f"A tabela '{empresa}' não existe."
-            else:
-                return "Senha da empresa não encontrada."
-    except psycopg2.Error as e:
-        return f"Erro ao conectar ao banco de dados: {e}"
 
 # Função para conectar ao banco de dados PostgreSQL, buscar os valores das colunas para uma linha específica
 # e criar um gráfico de pizza com base nesses valores
@@ -524,9 +428,5 @@ def collection_form():
 
 collection_form()
 
-# Criar a tabela de usuários se ainda não existir
-create_user_table()
 
-# Executar o site
-home()
 
