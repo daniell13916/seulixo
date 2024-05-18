@@ -133,6 +133,9 @@ def check_user(username_or_email, password):
 def home():
     st.write(" ")
 
+# Executar o site
+home()
+
 def register():
     st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
     username = st.text_input("Nome de Usuário").lower()
@@ -500,6 +503,5 @@ collection_form()
 # Criar a tabela de usuários se ainda não existir
 create_user_table()
 
-# Executar o site
-home()
+
 
