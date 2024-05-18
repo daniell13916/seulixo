@@ -41,7 +41,7 @@ def create_empresa(nome_empresa):
         st.error(f"Não foi possível criar a tabela para a empresa '{nome_empresa}': {e}")
 
 #adiciona novo usuário na tabela users, podendo sem empresa ou coletor
-def add_user(username, email, password, função, empresa=None):
+def add_user(username, email, password, função, empresa):
     try:
         if not email:
             raise ValueError("Por favor, insira um endereço de e-mail.")
@@ -49,9 +49,11 @@ def add_user(username, email, password, função, empresa=None):
             raise ValueError("O nome de usuário deve ter no mínimo 5 caracteres.")
         if len(password) < 5:
             raise ValueError("A senha deve ter no mínimo 5 caracteres.")
-        if função not in ["Coletor", "Empresa", "Administrador"]:
-            raise ValueError("Função inválida. Escolha entre 'Coletor', 'Empresa' ou 'Administrador'.")
-
+        if função not in ["Coletor", "Empresa"]:
+            raise ValueError("Função inválida. Escolha entre 'Coletor', 'Empresa'.")
+        if função == "Empresa" and not empresa:
+            raise ValueError("Por favor, insira o nome da empresa.")
+        
         with conn.cursor() as cur:
             # Verifica se o nome de usuário ou e-mail já existem na base de dados
             cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username, email))
@@ -59,8 +61,8 @@ def add_user(username, email, password, função, empresa=None):
             if existing_user:
                 raise ValueError("Usuário ou e-mail já cadastrados. Por favor, altere ou utilize os já existentes.")
             
-            # Convertendo a empresa para minúsculo se não for None
-            empresa_lower = empresa.lower() if empresa else None
+            # Convertendo a empresa para minúsculo se a função for "Empresa"
+            empresa_lower = empresa.lower() if função == "Empresa" else None
             
             cur.execute("INSERT INTO users (username, email, password, função, empresa) VALUES (%s, %s, %s, %s, %s);",
                         (username, email, password, função.capitalize(), empresa_lower))
@@ -77,6 +79,7 @@ def add_user(username, email, password, função, empresa=None):
         st.error(str(e))
     except Exception as e:
         st.error("Erro ao cadastrar usuário. Por favor, tente novamente mais tarde.")
+
 
 #para saber se o usuário ta online ou não
 def on_session_state_changed():
