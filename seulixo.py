@@ -147,7 +147,7 @@ st.markdown(
         display: inline-block;
     }
     .background-image-1 {
-        background-image: url('https://lh3.googleusercontent.com/pw/AF1QipO84xYEvAyBC2ybLTGR1NA_lTnBqf56ox1tllQv=w1600-h900-s-no-gm?authuser=0');
+        background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPC2quLaOjV1MfUB88xMTrj4cCuosUXXLFAdphYPR7FZ0JGHqGbxaJovyj7qjw8JAyOX8aEM5M7zrXrdFFVun2J4tVSp68kr0XEqVUaD7bjh9UyMgdLG78xIsZ93tdGhKjkV-OWTax249Cr2456eTkm=w1623-h913-s-no-gm?authuser=0');
     }
     .background-image-2 {
         background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNxfTwwWbmgFkT2z_-f0gXmyfKZL-NN7MPTrdgTmczbhr8YXi7XlgO-8w181PALWWJws73uJPGHGUMTxMHVPzXo0wr9FwDTlMNf_MgurOJCQWT4bAD8a0CEDlIBI8KmNa_Mw_9vE5G1rC7FcfQiq4p0=w1600-h900-s-no-gm?authuser=0');
@@ -179,7 +179,6 @@ st.markdown(
 # Adiciona as divs das imagens de fundo dentro de contêineres centralizados
 st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
 st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
-
 def home():
     with tab1:
         st.title("ABA EM MANUTENÇÃO!!")
