@@ -65,7 +65,7 @@ def add_user(username, email, password, função, empresa):
             cur.execute("SELECT * FROM users WHERE password = %s;", (password,))
             existing_password = cur.fetchone()
             if existing_password:
-                raise ValueError("A senha já está em uso. Por favor, escolha uma senha mais segura.")
+                raise ValueError("Por favor, escolha uma senha mais segura.")
             
             # Convertendo a empresa para minúsculo se a função for "Empresa"
             empresa_lower = empresa.lower() if função == "Empresa" else None
