@@ -129,7 +129,6 @@ def check_user(username_or_email, password):
         cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username_or_email, username_or_email))
         return cur.fetchone() is not None
 
-tab3 = st.tabs([ "Relatório de Coleta"])
 
 def home():
     st.write(" ")
@@ -495,31 +494,30 @@ def generate_report(senha_empresa, data_inicio, data_fim):
 
 # Função para exibir o formulário de coleta
 def collection_form():
-    with tab3:
-        st.markdown("<h1 style='color: #38b6ff;'>Relatório de Coleta</h1>", unsafe_allow_html=True)
-        with st.form("registro_coleta_form"):
-            st.write("Plano de Gerenciamento de Resíduos Sólidos (PGRS)")
-            username = st.text_input("Nome do Coletor")
-            dia = st.number_input("Dia", min_value=1, max_value=31)
-            mes = st.number_input("Mês", min_value=1, max_value=12)
-            ano = st.number_input("Ano", min_value=2024)
-            volume = st.number_input("Volume Coletado", min_value=0.01)
-            senha_empresa = st.text_input("Senha da Empresa", type="password")
+    st.markdown("<h1 style='color: #38b6ff;'>Relatório de Coleta</h1>", unsafe_allow_html=True)
+    with st.form("registro_coleta_form"):
+        st.write("Plano de Gerenciamento de Resíduos Sólidos (PGRS)")
+        username = st.text_input("Nome do Coletor")
+        dia = st.number_input("Dia", min_value=1, max_value=31)
+        mes = st.number_input("Mês", min_value=1, max_value=12)
+        ano = st.number_input("Ano", min_value=2024)
+        volume = st.number_input("Volume Coletado", min_value=0.01)
+        senha_empresa = st.text_input("Senha da Empresa", type="password")
 
-            submit_button_cadastro = st.form_submit_button("Registrar Coleta")
-            if submit_button_cadastro:
-                result_message = check_table_existence(senha_empresa, username, dia, mes, ano, volume)
-                st.write(result_message)
+        submit_button_cadastro = st.form_submit_button("Registrar Coleta")
+        if submit_button_cadastro:
+            result_message = check_table_existence(senha_empresa, username, dia, mes, ano, volume)
+            st.write(result_message)
 
-        with st.form("gerar_relatorio_form"):
-            st.markdown("<h1 style='color: #38b6ff;'>Gerar Relatório</h1>", unsafe_allow_html=True)
-            data_inicio = st.date_input("Data de Início")
-            data_fim = st.date_input("Data Final")
-            senha_relatorio = st.text_input("Senha da Empresa para Relatório", type="password")
-            submit_button_relatorio = st.form_submit_button("Gerar Relatório")
-            
-            if submit_button_relatorio:
-                generate_report(senha_relatorio, data_inicio, data_fim)
+    with st.form("gerar_relatorio_form"):
+        st.markdown("<h1 style='color: #38b6ff;'>Gerar Relatório</h1>", unsafe_allow_html=True)
+        data_inicio = st.date_input("Data de Início")
+        data_fim = st.date_input("Data Final")
+        senha_relatorio = st.text_input("Senha da Empresa para Relatório", type="password")
+        submit_button_relatorio = st.form_submit_button("Gerar Relatório")
+        
+        if submit_button_relatorio:
+            generate_report(senha_relatorio, data_inicio, data_fim)
 
 collection_form()
 
