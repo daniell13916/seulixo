@@ -132,19 +132,29 @@ def check_user(username_or_email, password):
 st.markdown(
     """
     <style>
+    html, body, .main, .block-container {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
     .container {
-        text-align: center;
-        padding: 0; /* Remove o espaçamento interno */
-        margin-bottom: 20px; /* Espaçamento entre as imagens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        margin: 0;
+        padding: 0;
     }
     .background-image {
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover; /* Faz com que a imagem ocupe todo o espaço do contêiner */
+        background-size: cover;
         width: 100%;
-        height: 0;
-        padding-top: 56.25%; /* Proporção de 16:9 */
-        display: inline-block;
+        height: 50%;
     }
     .background-image-1 {
         background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPC2quLaOjV1MfUB88xMTrj4cCuosUXXLFAdphYPR7FZ0JGHqGbxaJovyj7qjw8JAyOX8aEM5M7zrXrdFFVun2J4tVSp68kr0XEqVUaD7bjh9UyMgdLG78xIsZ93tdGhKjkV-OWTax249Cr2456eTkm=w1623-h913-s-no-gm?authuser=0');
@@ -152,33 +162,13 @@ st.markdown(
     .background-image-2 {
         background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNxfTwwWbmgFkT2z_-f0gXmyfKZL-NN7MPTrdgTmczbhr8YXi7XlgO-8w181PALWWJws73uJPGHGUMTxMHVPzXo0wr9FwDTlMNf_MgurOJCQWT4bAD8a0CEDlIBI8KmNa_Mw_9vE5G1rC7FcfQiq4p0=w1600-h900-s-no-gm?authuser=0');
     }
-
-    /* Media query para telas menores */
-    @media (max-width: 768px) {
-        .background-image {
-            width: 100%; /* Ajuste conforme necessário para telas menores */
-        }
-    }
-    /* Media query para telas menores que 640px */
-    @media (max-width: 640px) {
-        .background-image {
-            width: 100%; /* Ajuste conforme necessário para telas menores */
-        }
-    }
-    /* Media query para telas muito pequenas */
-    @media (max-width: 480px) {
-        .background-image {
-            width: 100%; /* Ajuste conforme necessário para telas muito pequenas */
-        }
-    }
     </style>
     """
     , unsafe_allow_html=True
 )
 
 # Adiciona as divs das imagens de fundo dentro de contêineres centralizados
-st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
-st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
+st.markdown("<div class='container'><div class='background-image background-image-1'></div><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
 
 tab1, tab2, tab3 = st.tabs(["Início", "cadastro", "Relatório de Coleta"])
 def home():
