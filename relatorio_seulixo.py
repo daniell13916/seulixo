@@ -129,25 +129,24 @@ def check_user(username_or_email, password):
         cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username_or_email, username_or_email))
         return cur.fetchone() is not None
 
-tab2, tab3 = st.tabs(["cadastro", "Relatório de Coleta"])
+ tab3 = st.tabs([ "Relatório de Coleta"])
 
 def home():
     st.write(" ")
 
 def register():
-    with tab2:
-        st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
-        username = st.text_input("Nome de Usuário").lower()
-        email = st.text_input("Endereço de E-mail")
-        password = st.text_input("Senha", type="password")
-        função = st.selectbox("Função", ["Coletor", "Empresa"])
-        empresa = None
-        if função == "Empresa":
-            empresa = st.text_input("Nome da Empresa").lower()
+    st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
+    username = st.text_input("Nome de Usuário").lower()
+    email = st.text_input("Endereço de E-mail")
+    password = st.text_input("Senha", type="password")
+    função = st.selectbox("Função", ["Coletor", "Empresa"])
+    empresa = None
+    if função == "Empresa":
+        empresa = st.text_input("Nome da Empresa").lower()
 
-        if st.button("Cadastrar"):
-            add_user(username, email, password, função, empresa)
-            st.success("Usuário cadastrado com sucesso!")
+    if st.button("Cadastrar"):
+        add_user(username, email, password, função, empresa)
+        st.success("Usuário cadastrado com sucesso!")
 # Chamar a função register para exibir o formulário de cadastro na aba 2
 register()
 
