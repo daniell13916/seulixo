@@ -129,11 +129,10 @@ def check_user(username_or_email, password):
         cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username_or_email, username_or_email))
         return cur.fetchone() is not None
 
-tab1,tab2, tab3 = st.tabs(["Início" ,"cadastro", "Relatório de Coleta"])
+tab2, tab3 = st.tabs(["cadastro", "Relatório de Coleta"])
 
 def home():
-    with tab1:
-        st.write(" ")
+    st.write(" ")
 
 def register():
     with tab2:
