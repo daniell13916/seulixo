@@ -180,7 +180,6 @@ st.markdown(
 
 # Adiciona as divs das imagens de fundo dentro de contêineres centralizados
 st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
-st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
 
 tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 #tab2, tab3 = st.tabs([ "Cadastro", "Relatório de Coleta"])
@@ -188,6 +187,7 @@ tab1, tab2, tab3 = st.tabs(["Início", "Cadastro", "Relatório de Coleta"])
 def home():
     with tab1:
         st.title("ABA EM MANUTENÇÃO!!")
+        st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
         st.markdown("<h1 style='color: #38b6ff;'>Quem Somos</h1>", unsafe_allow_html=True)
         # Adiciona o texto com o estilo de centralização
         st.markdown("""
