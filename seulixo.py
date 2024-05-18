@@ -40,7 +40,7 @@ def create_empresa(nome_empresa):
     except psycopg2.Error as e:
         st.error(f"Não foi possível criar a tabela para a empresa '{nome_empresa}': {e}")
 
-#adiciona novo usuário na tabela users, podendo sem empresa ou coletor
+#adiciona novo usuário na tabela users, podendo ser empresa ou coletor
 def add_user(username, email, password, função, empresa):
     try:
         if not email:
@@ -156,6 +156,21 @@ def check_table_existence(senha_empresa, username, dia, mes, ano, volume):
                 return "Senha da empresa não encontrada."
     except psycopg2.Error as e:
         return f"Erro ao conectar ao banco de dados: {e}"
+
+# Adiciona a imagem de plano de fundo e o estilo para ocupar toda a tela
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background: url("https://lh3.googleusercontent.com/pw/AP1GczMmpHRnbB_1-qEmLsLsuMQgL7-D3V91nrCKM_WlU4cA4yrPKO2vP8Pj3I_MssP3dlsv7HSLLwDh73kltLTLRm7aX3B5DALLaFlMNMXoCjPa8jhLFWw1vUfJcxqKCo5DK7gawaB45eueEkyEVUmizvVn=w1366-h768-s-no-gm?authuser=0");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
