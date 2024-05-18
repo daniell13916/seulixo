@@ -129,10 +129,10 @@ def check_user(username_or_email, password):
         cur.execute("SELECT * FROM users WHERE username = %s OR email = %s;", (username_or_email, username_or_email))
         return cur.fetchone() is not None
 
- tab2, tab3 = st.tabs([ "cadastro", "Relatório de Coleta"])
+ tab1, tab2 = st.tabs([ "cadastro", "Relatório de Coleta"])
 
 def register():
-    with tab2:
+    with tab1:
         st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
         username = st.text_input("Nome de Usuário").lower()
         email = st.text_input("Endereço de E-mail")
@@ -493,7 +493,7 @@ def generate_report(senha_empresa, data_inicio, data_fim):
 
 # Função para exibir o formulário de coleta
 def collection_form():
-    with tab3:
+    with tab2:
         st.markdown("<h1 style='color: #38b6ff;'>Relatório de Coleta</h1>", unsafe_allow_html=True)
         with st.form("registro_coleta_form"):
             st.write("Plano de Gerenciamento de Resíduos Sólidos (PGRS)")
