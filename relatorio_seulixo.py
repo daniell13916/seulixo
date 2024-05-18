@@ -132,7 +132,7 @@ def check_user(username_or_email, password):
 tab3 = st.tabs([ "Relatório de Coleta"])
 
 def home():
-    st.write(" ")
+    st.write("a ")
 #tirei
 def register():
     st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
