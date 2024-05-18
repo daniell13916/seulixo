@@ -179,6 +179,8 @@ st.markdown(
 # Adiciona as divs das imagens de fundo dentro de contêineres centralizados
 st.markdown("<div class='container'><div class='background-image background-image-1'></div></div>", unsafe_allow_html=True)
 st.markdown("<div class='container'><div class='background-image background-image-2'></div></div>", unsafe_allow_html=True)
+
+tab1, tab2, tab3 = st.tabs(["Início", "cadastro", "Relatório de Coleta"])
 def home():
     with tab1:
         st.title("ABA EM MANUTENÇÃO!!")
