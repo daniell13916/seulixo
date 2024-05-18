@@ -134,19 +134,7 @@ def home():
     st.write(" ")
 
 def register():
-    st.markdown("<h1 style='color: #38b6ff;'>Cadastro de Usuário</h1>", unsafe_allow_html=True)
-    username = st.text_input("Nome de Usuário").lower()
-    email = st.text_input("Endereço de E-mail")
-    password = st.text_input("Senha", type="password")
-    função = st.selectbox("Função", ["Coletor", "Empresa"])
-    empresa = None
-    if função == "Empresa":
-        empresa = st.text_input("Nome da Empresa").lower()
-
-    if st.button("Cadastrar"):
-        add_user(username, email, password, função, empresa)
-        st.success("Usuário cadastrado com sucesso!")
-# Chamar a função register para exibir o formulário de cadastro na aba 2
+    st.write(" ")
 register()
 
 #ve se a tabela já existe e se tiver vai add os dados e se não tiver vai criar tabela com base na função create_empresa
