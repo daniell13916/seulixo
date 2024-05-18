@@ -61,6 +61,12 @@ def add_user(username, email, password, função, empresa):
             if existing_user:
                 raise ValueError("Usuário ou e-mail já cadastrados. Por favor, altere ou utilize os já existentes.")
             
+            # Verifica se a senha já existe na base de dados
+            cur.execute("SELECT * FROM users WHERE password = %s;", (password,))
+            existing_password = cur.fetchone()
+            if existing_password:
+                raise ValueError("A senha já está em uso. Por favor, escolha uma senha mais segura.")
+            
             # Convertendo a empresa para minúsculo se a função for "Empresa"
             empresa_lower = empresa.lower() if função == "Empresa" else None
             
@@ -79,7 +85,6 @@ def add_user(username, email, password, função, empresa):
         st.error(str(e))
     except Exception as e:
         st.error("Erro ao cadastrar usuário. Por favor, tente novamente mais tarde.")
-
 
 #para saber se o usuário ta online ou não
 def on_session_state_changed():
