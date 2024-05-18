@@ -136,27 +136,23 @@ st.markdown(
     <style>
     .container {
         text-align: center;
-        background-color: white; /* Adiciona um fundo branco ao contêiner */
-        padding: 20px; /* Adiciona um espaçamento interno para evitar que a imagem toque nas bordas */
+        padding: 0; /* Remove o espaçamento interno */
         margin-bottom: 20px; /* Espaçamento entre as imagens */
     }
     .background-image {
         background-position: center;
         background-repeat: no-repeat;
+        background-size: cover; /* Faz com que a imagem ocupe todo o espaço do contêiner */
+        width: 100%;
         height: 0;
         padding-top: 56.25%; /* Proporção de 16:9 */
         display: inline-block;
     }
     .background-image-1 {
         background-image: url('https://i.im.ge/2024/05/06/ZRUJ9S.WhatsApp-Image-2024-05-05-at-5-41-21-PM-Photoroom-png-Photoroom.md.png');
-        width: 100%;
     }
     .background-image-2 {
         background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNxfTwwWbmgFkT2z_-f0gXmyfKZL-NN7MPTrdgTmczbhr8YXi7XlgO-8w181PALWWJws73uJPGHGUMTxMHVPzXo0wr9FwDTlMNf_MgurOJCQWT4bAD8a0CEDlIBI8KmNa_Mw_9vE5G1rC7FcfQiq4p0=w1600-h900-s-no-gm?authuser=0');
-        background-size: contain; /* Mantém a proporção da imagem sem cortar */
-        width: 100%;
-        height: 0;
-        padding-top: 56.25%; /* Proporção de 16:9 para a imagem */
     }
 
     /* Media query para telas menores */
