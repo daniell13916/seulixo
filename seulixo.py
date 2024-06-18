@@ -12,7 +12,7 @@ conn = psycopg2.connect(
     host="seulixo-aws.c7my4s6c6mqm.us-east-1.rds.amazonaws.com",
     database="postgres",
     user="postgres",
-    password="postgres"
+    password="#SEUlixo321"
 )
 
 #cria a tabela caso tenha novo cadastro e ela não exista
