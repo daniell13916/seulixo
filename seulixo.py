@@ -124,7 +124,6 @@ def register():
 
     if st.button("Cadastrar"):
         add_user(username, email, password, função, empresa)
-        st.success("Usuário cadastrado com sucesso!")
 # Chamar a função register para exibir o formulário de cadastro na aba 2
 register()
 
