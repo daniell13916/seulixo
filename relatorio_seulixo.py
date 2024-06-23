@@ -408,7 +408,7 @@ def collection_form():
         dia = st.number_input("Dia", min_value=1, max_value=31)
         mes = st.number_input("Mês", min_value=1, max_value=12)
         ano = st.number_input("Ano", min_value=2024)
-        volume = st.number_input("Volume Coletado", min_value=0.01)
+        volume = st.number_input("Volume Coletado (Kg)", min_value=0.01)
         senha_empresa = st.text_input("Senha da Empresa", type="password")
 
         submit_button_cadastro = st.form_submit_button("Registrar Coleta")
