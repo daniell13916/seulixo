@@ -23,7 +23,7 @@ def create_empresa(nome_empresa):
             cur.execute("SELECT EXISTS(SELECT 1 FROM information_schema.tables WHERE table_schema = 'Dados de coleta' AND table_name = %s);", (nome_empresa,))
             exists = cur.fetchone()[0]
             if not exists:
-                # Criar a tabela da empresa
+                # Criar a tabela da empresa com colunas para cada tipo de resíduo
                 cur.execute(f"""
                     CREATE TABLE IF NOT EXISTS "Dados de coleta".{nome_empresa} (
                         id SERIAL PRIMARY KEY,
@@ -31,7 +31,30 @@ def create_empresa(nome_empresa):
                         mes INTEGER NOT NULL,
                         ano INTEGER NOT NULL,
                         volume DECIMAL(10, 2) NOT NULL,
-                        nome_coletor VARCHAR(100) NOT NULL
+                        nome_coletor VARCHAR(100) NOT NULL,
+                        plastico INTEGER DEFAULT 0,
+                        vidro INTEGER DEFAULT 0,
+                        papel INTEGER DEFAULT 0,
+                        papelao INTEGER DEFAULT 0,
+                        aluminio INTEGER DEFAULT 0,
+                        aco INTEGER DEFAULT 0,
+                        residuos_eletronicos INTEGER DEFAULT 0,
+                        pilhas_baterias INTEGER DEFAULT 0,
+                        folhas_galhos INTEGER DEFAULT 0,
+                        tetrapak INTEGER DEFAULT 0,
+                        pneus INTEGER DEFAULT 0,
+                        oleo_cozinha INTEGER DEFAULT 0,
+                        cds_dvds INTEGER DEFAULT 0,
+                        cartuchos_tinta INTEGER DEFAULT 0,
+                        entulho_construcao INTEGER DEFAULT 0,
+                        madeira INTEGER DEFAULT 0,
+                        paletes INTEGER DEFAULT 0,
+                        serragem INTEGER DEFAULT 0,
+                        produtos_quimicos INTEGER DEFAULT 0,
+                        medicamentos INTEGER DEFAULT 0,
+                        lampadas_fluorescentes INTEGER DEFAULT 0,
+                        materia_organica INTEGER DEFAULT 0,
+                        cobre INTEGER DEFAULT 0
                     );
                 """)
                 conn.commit()
