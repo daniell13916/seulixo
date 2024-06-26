@@ -37,7 +37,7 @@ def create_empresa(nome_empresa):
                         vidro  INTEGER DEFAULT 0,
                         plastico  INTEGER DEFAULT 0,
                         embalagem_longa_vida INTEGER DEFAULT 0,
-                        outros_metais INTEGER  INTEGER DEFAULT 0,
+                        outros_metais INTEGER DEFAULT 0,
                         porcentagem_rejeitos  INTEGER DEFAULT 0
                     );
                 """)
