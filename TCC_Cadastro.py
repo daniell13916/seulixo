@@ -34,30 +34,18 @@ def create_empresa(nome_empresa):
                         nome_coletor VARCHAR(100) NOT NULL,
                         plastico INTEGER DEFAULT 0,
                         vidro INTEGER DEFAULT 0,
-                        papel INTEGER DEFAULT 0,
-                        papelao INTEGER DEFAULT 0,
+                        papel_papelao INTEGER DEFAULT 0,
                         aluminio INTEGER DEFAULT 0,
-                        aco INTEGER DEFAULT 0,
-                        residuos_eletronicos INTEGER DEFAULT 0,
-                        pilhas_baterias INTEGER DEFAULT 0,
-                        folhas_galhos INTEGER DEFAULT 0,
-                        tetrapak INTEGER DEFAULT 0,
-                        pneus INTEGER DEFAULT 0,
-                        oleo_cozinha INTEGER DEFAULT 0,
-                        cds_dvds INTEGER DEFAULT 0,
-                        cartuchos_tinta INTEGER DEFAULT 0,
-                        entulho_construcao INTEGER DEFAULT 0,
-                        madeira INTEGER DEFAULT 0,
-                        paletes INTEGER DEFAULT 0,
-                        serragem INTEGER DEFAULT 0,
-                        produtos_quimicos INTEGER DEFAULT 0,
-                        medicamentos INTEGER DEFAULT 0,
-                        lampadas_fluorescentes INTEGER DEFAULT 0,
-                        materia_organica INTEGER DEFAULT 0,
-                        cobre INTEGER DEFAULT 0
+                        embalagem_longa_vida INTEGER DEFAULT 0,
+                        outros_metais INTEGER DEFAULT 0,
+                        porcentagem_rejeitos INTEGER DEFAULT 0,
                     );
                 """)
                 conn.commit()
+            else:
+                st.warning(f"A tabela para a empresa '{nome_empresa}' já existe.")
+    except psycopg2.Error as e:
+        st.error(f"Não foi possível criar a tabela para a empresa '{nome_empresa}': {e}")
             else:
                 st.warning(f"A tabela para a empresa '{nome_empresa}' já existe.")
     except psycopg2.Error as e:
