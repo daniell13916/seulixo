@@ -31,14 +31,14 @@ def create_empresa(nome_empresa):
                         mes INTEGER NOT NULL,
                         ano INTEGER NOT NULL,
                         volume DECIMAL(10, 2) NOT NULL,
-                        nome_coletor VARCHAR(100) NOT NULL
+                        nome_coletor VARCHAR(100) NOT NULL,
                         aluminio INTEGER NOT NULL,
                         papel_e_papelao INTEGER NOT NULL,
                         vidro INTEGER NOT NULL,
                         plastico INTEGER NOT NULL,
                         embalagem_longa_vida INTEGER NOT NULL,
                         outros_metais INTEGER NOT NULL,
-                        porcentagem_rejeitos INTEGER NOT NULL,
+                        porcentagem_rejeitos INTEGER NOT NULL
                     );
                 """)
                 conn.commit()
