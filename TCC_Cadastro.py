@@ -23,7 +23,7 @@ def create_empresa(nome_empresa):
             cur.execute("SELECT EXISTS(SELECT 1 FROM information_schema.tables WHERE table_schema = 'Dados de coleta' AND table_name = %s);", (nome_empresa,))
             exists = cur.fetchone()[0]
             if not exists:
-                # Criar a tabela da empresa com colunas para cada tipo de resíduo
+                # Criar a tabela da empresa
                 cur.execute(f"""
                     CREATE TABLE IF NOT EXISTS "Dados de coleta".{nome_empresa} (
                         id SERIAL PRIMARY KEY,
@@ -39,14 +39,13 @@ def create_empresa(nome_empresa):
                         embalagem_longa_vida INTEGER DEFAULT 0,
                         outros_metais INTEGER DEFAULT 0,
                         porcentagem_rejeitos INTEGER DEFAULT 0,
-                    );
+                   );
                 """)
                 conn.commit()
             else:
                 st.warning(f"A tabela para a empresa '{nome_empresa}' já existe.")
     except psycopg2.Error as e:
         st.error(f"Não foi possível criar a tabela para a empresa '{nome_empresa}': {e}")
-
 
 #adiciona novo usuário na tabela users, podendo ser empresa ou coletor
 def add_user(username, email, password, função, empresa):
