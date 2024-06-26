@@ -46,10 +46,7 @@ def create_empresa(nome_empresa):
                 st.warning(f"A tabela para a empresa '{nome_empresa}' já existe.")
     except psycopg2.Error as e:
         st.error(f"Não foi possível criar a tabela para a empresa '{nome_empresa}': {e}")
-            else:
-                st.warning(f"A tabela para a empresa '{nome_empresa}' já existe.")
-    except psycopg2.Error as e:
-        st.error(f"Não foi possível criar a tabela para a empresa '{nome_empresa}': {e}")
+
 
 #adiciona novo usuário na tabela users, podendo ser empresa ou coletor
 def add_user(username, email, password, função, empresa):
