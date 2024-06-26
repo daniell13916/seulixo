@@ -31,7 +31,14 @@ def create_empresa(nome_empresa):
                         mes INTEGER NOT NULL,
                         ano INTEGER NOT NULL,
                         volume DECIMAL(10, 2) NOT NULL,
-                        nome_coletor VARCHAR(100) NOT NULL
+                        nome_coletor VARCHAR(100) NOT NULL,
+                        aluminio INTEGER NOT NULL,
+                        papel_e_papelao INTEGER NOT NULL,
+                        vidro INTEGER NOT NULL,
+                        plastico INTEGER NOT NULL,
+                        embalagem_longa_vida INTEGER NOT NULL,
+                        outros_metais INTEGER NOT NULL,
+                        porcentagem_rejeitos INTEGER NOT NULL
                     );
                 """)
                 conn.commit()
@@ -39,7 +46,7 @@ def create_empresa(nome_empresa):
                 st.warning(f"A tabela para a empresa '{nome_empresa}' já existe.")
     except psycopg2.Error as e:
         st.error(f"Não foi possível criar a tabela para a empresa '{nome_empresa}': {e}")
-
+        
 #adiciona novo usuário na tabela users, podendo ser empresa ou coletor
 def add_user(username, email, password, função, empresa):
     try:
